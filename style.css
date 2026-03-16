@@ -299,6 +299,32 @@ nav a {
     border: 1px solid var(--glass-border);
 }
 
+/* Links & Buttons in Cards */
+.links {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.links a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(14, 165, 233, 0.1);
+    border: 1px solid rgba(14, 165, 233, 0.3);
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.links a:hover {
+    background: var(--primary-color);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+}
+
 /* Accent & Text Fixes */
 .accent-text {
     color: var(--primary-color);
@@ -387,10 +413,15 @@ nav a {
 
 /* Footer */
 footer {
-    padding: 4rem 2rem;
+    padding: 6rem 2rem;
     text-align: center;
-    color: #64748b;
+    color: #94a3b8;
     border-top: 1px solid var(--glass-border);
+}
+
+.footer-text {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
 }
 
 /* Protocol Header & Status Tags */
