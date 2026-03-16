@@ -364,14 +364,14 @@ nav a {
 }
 
 .embed-card {
-    padding: 1rem;
+    padding: 0.5rem;
     display: flex;
     justify-content: center;
     background: var(--glass-bg);
 }
 
 .embed-card blockquote {
-    width: 100% !important;
+    margin: 0 !important;
 }
 
 /* Existing Glass & Card Fixes */
