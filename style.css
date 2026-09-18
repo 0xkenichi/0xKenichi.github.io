@@ -603,3 +603,10 @@ nav a.cv-nav {
     0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.5); }
     50% { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
 }
+
+/* Completed status tag */
+.status-completed {
+    background: rgba(56, 189, 248, 0.2);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+}
