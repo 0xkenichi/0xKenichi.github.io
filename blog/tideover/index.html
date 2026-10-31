@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tideover: an app that learns when my crypto pay really arrives | Kenichi</title>
+    <meta name="description" content="I'm paid in stablecoins, and 'paid on the 1st' usually means the 9th. Tideover learns when each payer really pays, tells you what's safe to spend until then, and remembers everything in Walrus Memory. Built for the Tatum × Walrus Total Recall hackathon.">
+    <meta property="og:title" content="Tideover: an app that learns when my crypto pay really arrives">
+    <meta property="og:description" content="Built for the Tatum × Walrus Total Recall hackathon: Sui mainnet through Tatum, memory on Walrus.">
+    <meta property="og:image" content="https://0xkenichi.github.io/blog/tideover/month5.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0f172a;
+            --text: #e2e8f0;
+            --muted: #94a3b8;
+            --heading: #f8fafc;
+            --accent: #0ea5e9;
+            --line: rgba(255, 255, 255, 0.1);
+            --card: rgba(30, 41, 59, 0.7);
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+        a { color: var(--accent); }
+        .top {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 24px 16px 0;
+            font-size: 15px;
+        }
+        .top a { text-decoration: none; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 20px; color: var(--heading); }
+        article { max-width: 760px; margin: 0 auto; padding: 24px 16px 80px; }
+        h1, h2 { font-family: 'Outfit', sans-serif; color: var(--heading); line-height: 1.2; }
+        h1 { font-size: clamp(32px, 6vw, 46px); margin: 24px 0 8px; }
+        h2 { font-size: 28px; margin: 48px 0 12px; }
+        .meta { color: var(--muted); font-size: 15px; margin: 0 0 28px; }
+        .links { display: flex; flex-wrap: wrap; gap: 10px 18px; margin: 0 0 28px; font-size: 16px; }
+        .links a {
+            border: 1px solid var(--line);
+            background: var(--card);
+            border-radius: 999px;
+            padding: 6px 14px;
+            text-decoration: none;
+        }
+        figure { margin: 28px 0; }
+        figure img { width: 100%; border-radius: 14px; border: 1px solid var(--line); display: block; }
+        figcaption { color: var(--muted); font-size: 14px; margin-top: 8px; }
+        code { background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 1px 6px; font-size: 0.88em; }
+        table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 16px; font-variant-numeric: tabular-nums; }
+        th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+        th { color: var(--muted); font-weight: 500; }
+        blockquote { margin: 16px 0; padding: 4px 18px; border-left: 3px solid var(--accent); color: var(--heading); }
+        li { margin: 6px 0; }
+        .end { color: var(--muted); font-size: 15px; margin-top: 48px; border-top: 1px solid var(--line); padding-top: 18px; }
+    </style>
+</head>
+<body>
+    <div class="top"><a href="/">Kenichi</a></div>
+    <article>
+        <h1>Tideover: an app that learns when my crypto pay really arrives</h1>
+        <p class="meta">Olanrewaju "Kenichi" Animashaun · Lagos · 31 October 2026 · Built for the Tatum × Walrus Total Recall hackathon</p>
+        <p class="links">
+            <a href="https://github.com/0xkenichi/tideover">Code on GitHub</a>
+            <a href="https://youtu.be/f2WeF2j2nnY">2-minute demo</a>
+        </p>
+
+        <p>I live in Lagos and I'm paid in stablecoins. Some of that money arrives on time. A lot of it doesn't. A stipend that's "paid on the 1st" lands on the 9th, or the 11th, or after I've chased it for weeks. I've waited months for pay I was promised.</p>
+        <p>Budgeting apps don't help with this. They assume a salary that arrives on the same day every month. When your income is irregular, the question isn't "what's my budget?" It's "how much can I spend each day until the next money actually lands?"</p>
+        <p>So for the Tatum × Walrus Total Recall hackathon I built <strong>Tideover</strong>. It watches a Sui wallet, learns when each payer <em>really</em> pays, and remembers what it learns in Walrus Memory, so it gets sharper every month.</p>
+
+        <figure>
+            <img src="month5.png" alt="Tideover after five months: safe to spend per day, and the next payments with promised and expected dates">
+            <figcaption>Five months into the sample: the DAO promises the 1st, Tideover expects the 9th.</figcaption>
+        </figure>
+
+        <h2>What it does</h2>
+        <p>You paste a Sui address (or a <code>name.sui</code>). Tideover reads your recent incoming USDC and USDT, groups the payments by who sent them, and shows you:</p>
+        <ul>
+            <li><strong>Safe to spend:</strong> how many naira you can spend each day until the late end of your next payment window, after setting aside the monthly costs you've told it about (rent savings, data and power, money for family) that fall due before then.</li>
+            <li><strong>Money coming in:</strong> for each regular payer, when they promised to pay and when Tideover actually expects the money: "Promised 1 Nov. Expected Mon 9 Nov, between 8 and 10 Nov."</li>
+            <li><strong>How Tideover is improving:</strong> how many days each forecast was off, next to how far off simply trusting the promise would have been.</li>
+            <li><strong>What Tideover remembers:</strong> every memory, with a link to its Walrus blob.</li>
+        </ul>
+        <p>You teach it by naming payers, setting the day they promise to pay, marking one-off money (a bounty, a transfer from your own exchange account), and adding your monthly costs. Each of these is a memory.</p>
+
+        <h2>How it uses Tatum</h2>
+        <p>Every chain read goes through Tatum, on the server, so the API key never reaches the browser.</p>
+        <p>Sui has deprecated JSON-RPC on public full nodes, and Tatum's Sui mainnet gateway now serves <strong>GraphQL</strong>. One query to <code>sui-mainnet.gateway.tatum.io/graphql</code> returns the wallet's stablecoin balances, its SuiNS name and its recent transactions with their balance changes. Tideover pages back through up to 200 transactions and keeps only stablecoin money that someone else sent in. A second query looks up the SuiNS names of the people who paid.</p>
+        <p>The naira amounts use Tatum's <strong>Data API</strong> exchange rate (<code>symbol=USDC&amp;basePair=NGN</code>), so the numbers are in the currency I actually spend.</p>
+
+        <h2>How it uses Walrus Memory</h2>
+        <p>Tideover has no database. Everything it learns lives in Walrus Memory on mainnet, written through the official <code>@mysten-incubation/memwal</code> SDK, one namespace per wallet. It keeps four kinds of memory:</p>
+        <ol>
+            <li><strong>What you taught it:</strong> "You said Northstar DAO promises to pay on the 1st of each month."</li>
+            <li><strong>Forecasts:</strong> "Expects about $600 from Northstar DAO on Thu 9 Jul (between 6 and 12 Jul)."</li>
+            <li><strong>Grades:</strong> "Northstar DAO paid on Sat 11 Jul. Tideover expected Thu 9 Jul: off by 2 days. Going by the promise (1 Jul) would have been off by 10 days."</li>
+            <li><strong>Lessons:</strong> "Learned: Northstar DAO now usually pays 9 days after the promised day, not 8."</li>
+        </ol>
+        <p>Each memory is a plain English sentence followed by a tagged JSON copy of the record. The sentence makes semantic recall work and lets a person read it. The JSON lets Tideover rebuild its state exactly. When you open a wallet, Tideover recalls everything in that namespace and picks up where it left off, on any device.</p>
+        <p>The part I like most is the <strong>Walrus Memory switch</strong>. Turn it off and Tideover acts as if it remembered nothing: payers go back to raw addresses, the promises and costs disappear, the track record is gone, and the "safe to spend" number changes. That's the clearest way I found to show what the memory is worth.</p>
+
+        <figure>
+            <img src="timeline.png" alt="The memory timeline, each entry linked to its Walrus blob">
+            <figcaption>What Tideover remembers: every forecast, grade and lesson is a memory on Walrus mainnet.</figcaption>
+        </figure>
+
+        <h2>How it learned over time</h2>
+        <p>The learning loop is a single pure function, and it's tested. Before each payday it looks for the forecast it made beforehand: first in Walrus Memory, otherwise by working it out from earlier history, which the app marks as "checked against history". It grades that forecast, learns from the payday, writes any lesson to memory and makes a fresh forecast.</p>
+        <p>In the five-month sample (Ada, a fictional designer in Lagos, with simulated payments), after one lesson ("the DAO says it pays on the 1st"):</p>
+        <table>
+            <thead><tr><th>Payday</th><th>Promise off by</th><th>Tideover off by</th></tr></thead>
+            <tbody>
+                <tr><td>11 Jul</td><td>10 days</td><td>2 days</td></tr>
+                <tr><td>8 Aug</td><td>7 days</td><td>2 days</td></tr>
+                <tr><td>10 Sep</td><td>9 days</td><td>1 day</td></tr>
+                <tr><td>9 Oct</td><td>8 days</td><td>1 day</td></tr>
+            </tbody>
+        </table>
+        <p>The forecast window also narrows, from three days either side after the first payday to one day after four. That run wrote 37 memories to Walrus mainnet.</p>
+        <p>My own Sui wallet is new, so it has no pay to learn from yet. Tideover reads it live through Tatum, finds no stablecoin income, and plans a month ahead until the first payday lands. From then on it starts forecasting and grading itself the same way.</p>
+
+        <h2>What I'd do next</h2>
+        <ul>
+            <li>Read income in more coins, priced through Tatum.</li>
+            <li>Warn you a day before a payer's usual window, and tell you when someone is later than their own normal.</li>
+            <li>Let you share a payer's track record with them, politely.</li>
+        </ul>
+
+        <p class="end">Thanks to Tatum and the Walrus Foundation for running Total Recall. The code is MIT-licensed on <a href="https://github.com/0xkenichi/tideover">GitHub</a>.</p>
+    </article>
+</body>
+</html>
