@@ -75,6 +75,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .pill-test { color: var(--test); background: var(--test-bg); }
 .pill-wip { color: var(--wip); background: var(--wip-bg); }
 .pill-vol { color: var(--vol); background: var(--vol-bg); }
+.pill-com { color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, transparent); }
 .eyebrow { font: 500 12px var(--mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-3); }
 
 /* Address header */
