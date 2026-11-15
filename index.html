@@ -3,645 +3,480 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olanrewaju Animashaun (Kenichi) | Web3 Operations &amp; Program Coordinator</title>
-    <meta name="description" content="Web3 operations and program coordinator in Lagos, Nigeria. I build clear workflows for distributed teams: contributor onboarding, documentation, payment tracking, reporting and community programs.">
+    <title>Kenichi | Web3 Operations &amp; Program Coordinator</title>
+    <meta name="description" content="Olanrewaju 'Kenichi' Animashaun: Web3 operations and program coordinator in Lagos. Contributor onboarding, documentation, payment tracking, reporting and community programs, plus the tools I build for them.">
+    <meta property="og:title" content="Kenichi | Web3 Operations & Program Coordinator">
+    <meta property="og:description" content="Every role, build and result on one page, with receipts.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=2">
+    <script>
+        try { var t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+    </script>
 </head>
 <body>
-    <div class="background-blob blob-1"></div>
-    <div class="background-blob blob-2"></div>
-    <div class="background-blob blob-3"></div>
-
-    <header>
-        <nav>
-            <div class="logo">Kenichi</div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#case-studies">Case studies</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#data">Data</a></li>
-                <li><a href="#editorial">Writing</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="Olanrewaju-Animashaun-Kenichi-CV.pdf" download class="cv-nav">Download CV</a></li>
-            </ul>
-        </nav>
+    <header class="topbar">
+        <div class="wrap topbar-inner">
+            <a href="#top" class="brand"><span class="brand-mark" aria-hidden="true"></span>kenichi<span class="brand-dim">/explorer</span></a>
+            <label class="search">
+                <span class="sr-only">Search this page</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+                <input id="q" type="search" placeholder="Search roles, builds, skills, chains…" autocomplete="off">
+                <kbd>/</kbd>
+            </label>
+            <div class="topbar-actions">
+                <button id="theme" class="icon-btn" type="button" aria-label="Switch light or dark">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+                </button>
+                <a href="#contact" class="btn btn-solid">Hire me</a>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <section id="home" class="hero section">
-            <div class="hero-container">
-                <div class="profile-frame">
-                    <img src="https://pbs.twimg.com/profile_images/1901377670950031360/hdfn91xq.jpg" alt="Olanrewaju Animashaun" class="profile-img">
-                </div>
-                <div class="hero-content">
-                    <h1>Olanrewaju Animashaun <span class="accent-text">(Kenichi)</span></h1>
-                    <p class="tagline hero-role">Web3 Operations &amp; Program Coordinator</p>
-                    <p class="hero-offer">I build clear workflows for distributed teams: contributor onboarding, documentation, payment tracking, reporting and community programs.</p>
-                    <div class="open-pill"><span></span>Available for paid contract or full-time work · Lagos / remote (WAT, UTC+1)</div>
-                    <div class="hero-ctas">
-                        <a href="#case-studies" class="cta-btn cta-primary">View 3 case studies</a>
-                        <a href="#contact" class="cta-btn cta-ghost">Contact me</a>
-                    </div>
-                    <div class="bio-card glass">
-                        <p>4+ years running operations inside DAOs and decentralized AI programs. I designed the contribution and payment structure that paid 100+ contributors in SingularityNET's Ambassador Program, wrote the operations documentation for CurableLabs and its SubDAO, and reviewed 50+ grant proposals for Deep Funding. I turn volunteer-heavy communities into teams with clear roles, repeatable processes and numbers you can report on.</p>
-                    </div>
-                    <div class="impact-stats">
-                        <div class="impact-stat"><b>100+</b><span>contributors paid through reward structures I designed</span></div>
-                        <div class="impact-stat"><b>1,000+</b><span>participants in a daily Zealy program I helped design</span></div>
-                        <div class="impact-stat"><b>50+</b><span>grant proposals reviewed for Deep Funding</span></div>
-                        <div class="impact-stat"><b>$400k+</b><span>allocated by the Deep Funding circles I reviewed for</span></div>
-                    </div>
-                    <div class="social-links">
-                        <a href="Olanrewaju-Animashaun-Kenichi-CV.pdf" download class="social-btn"><i class="fas fa-file-pdf"></i> Download CV</a>
-                        <a href="https://x.com/0xKenichi" target="_blank" class="social-btn"><i class="fab fa-x-twitter"></i> X (@0xKenichi)</a>
-                        <a href="https://www.linkedin.com/in/finch-vestra/" target="_blank" class="social-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                        <a href="https://github.com/0xkenichi" target="_blank" class="social-btn"><i class="fab fa-github"></i> GitHub</a>
-                    </div>
+    <main id="top">
+        <section class="wrap address">
+            <img src="https://pbs.twimg.com/profile_images/1901377670950031360/hdfn91xq.jpg" alt="Kenichi's avatar" class="avatar" width="72" height="72">
+            <div class="address-main">
+                <p class="eyebrow">Address</p>
+                <h1>Olanrewaju “Kenichi” Animashaun</h1>
+                <div class="address-line">
+                    <code class="mono">0xkenichi</code>
+                    <button class="chip-btn" type="button" data-copy="https://0xkenichi.github.io" aria-label="Copy page link">copy link</button>
+                    <span class="tag tag-strong">Web3 Operations &amp; Program Coordinator</span>
+                    <span class="tag">Builder</span>
+                    <span class="tag">Lagos · UTC+1</span>
                 </div>
             </div>
         </section>
 
-        <section id="case-studies" class="section">
-            <h2 class="section-title">Case Studies</h2>
-            <p class="section-lead">Three operations problems, what I did about them, and what came of it.</p>
-            <div class="case-grid">
-                <article class="case-card glass">
-                    <span class="case-org">SingularityNET Ambassador Program · 2023 – present</span>
-                    <h3>Paying a volunteer community fairly, every month</h3>
-                    <dl>
-                        <dt>Problem</dt>
-                        <dd>Contributors worked across many workgroups. Their output was hard to compare, so rewards were hard to justify and people drifted off.</dd>
-                        <dt>What I did</dt>
-                        <dd>Designed the workgroup-led contribution and reward structure and the payment structure behind it, including an impact-based points system that rewards up to 15 contributors a month. Founded the Writers Workgroup and the Marketing Guild, and ran onboarding sessions for new members.</dd>
-                        <dt>Result</dt>
-                        <dd>100+ contributors paid through the structure. 200+ people rewarded through trivia and Zealy quests, and the daily Zealy program I helped design grew to 1,000+ participants.</dd>
-                        <dt>Proof</dt>
-                        <dd><a href="https://medium.com/@singularitynetambassadors" target="_blank">Ambassador publication</a> · <a href="https://medium.com/singularitynet-ambassador-community-page" target="_blank">Community hub</a></dd>
-                    </dl>
-                </article>
+        <section class="wrap pitch">
+            <p class="pitch-text">I build clear workflows for distributed teams: <mark>contributor onboarding, documentation, payment tracking, reporting and community programs.</mark> When the tool doesn't exist, I build that too.</p>
+            <div class="pitch-side">
+                <p class="status"><span class="dot" aria-hidden="true"></span>Available for paid contract or full-time work · remote</p>
+                <div class="pitch-ctas">
+                    <a href="#cases" class="btn btn-solid">See the receipts</a>
+                    <a href="mailto:0xkenichi@gmail.com?subject=Operations%20work" class="btn">Email me</a>
+                    <a href="Olanrewaju-Animashaun-Kenichi-CV.pdf" download class="btn">CV (PDF)</a>
+                </div>
+            </div>
+        </section>
 
-                <article class="case-card glass">
-                    <span class="case-org">CurableLabs · Mar 2025 – Mar 2026</span>
+        <section class="wrap overview" aria-label="Overview">
+            <div class="card">
+                <h2 class="card-title">Overview</h2>
+                <dl class="kv">
+                    <dt>Main offer</dt><dd>Operations &amp; program coordination</dd>
+                    <dt>Experience</dt><dd>4+ years in DAOs and decentralized AI</dd>
+                    <dt>Works with</dt><dd>Foundations, DAOs, early-stage teams</dd>
+                    <dt>Elsewhere</dt><dd><a href="https://x.com/0xKenichi" target="_blank" rel="noopener">X</a> · <a href="https://www.linkedin.com/in/finch-vestra/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/0xkenichi" target="_blank" rel="noopener">GitHub</a></dd>
+                </dl>
+            </div>
+            <div class="card">
+                <h2 class="card-title">Value moved</h2>
+                <dl class="kv kv-num">
+                    <dt>Contributors paid through systems I designed</dt><dd>100+</dd>
+                    <dt>Grant proposals reviewed</dt><dd>50+</dd>
+                    <dt>Community funds those rounds allocated</dt><dd>$400k+</dd>
+                    <dt>Daily Zealy program participants</dt><dd>1,000+</dd>
+                </dl>
+            </div>
+            <div class="card">
+                <h2 class="card-title">Activity</h2>
+                <dl class="kv kv-num">
+                    <dt>Builds shipped (2025–26)</dt><dd>13</dd>
+                    <dt>Paid roles</dt><dd>15</dd>
+                    <dt>Articles published</dt><dd>100+</dd>
+                    <dt>Dune dashboards</dt><dd>4</dd>
+                </dl>
+            </div>
+        </section>
+
+        <nav class="tabs-bar" aria-label="Sections">
+            <div class="wrap tabs">
+                <a href="#cases" class="tab">Case studies</a>
+                <a href="#builds" class="tab">Builds <span class="count">13</span></a>
+                <a href="#work" class="tab">Work history <span class="count">16</span></a>
+                <a href="#services" class="tab">Hire for</a>
+                <a href="#data" class="tab">Data</a>
+                <a href="#writing" class="tab">Writing</a>
+            </div>
+        </nav>
+
+        <section id="cases" class="wrap block">
+            <div class="block-head">
+                <h2>Case studies</h2>
+                <p>Three operations problems: what was broken, what I did, what came of it, and where to check.</p>
+            </div>
+
+            <article class="tx searchable" data-keys="singularitynet snet ambassador rewards payments points zealy onboarding writers guild">
+                <header class="tx-head">
+                    <span class="pill pill-ok">Success</span>
+                    <h3>Paying a volunteer-heavy community fairly, every month</h3>
+                    <span class="tx-org">SingularityNET Ambassador Program · 2023 – present</span>
+                </header>
+                <dl class="tx-body">
+                    <dt>Problem</dt>
+                    <dd>Contributors worked across many workgroups. Their output was hard to compare, so rewards were hard to justify and good people drifted off.</dd>
+                    <dt>What I did</dt>
+                    <dd>Designed the workgroup-led contribution and reward structure and the payment structure behind it, including an impact-based points system that rewards up to 15 contributors a month. Founded the Writers Workgroup and the Marketing Guild, and ran onboarding sessions for new members.</dd>
+                    <dt>Result</dt>
+                    <dd><b>100+ contributors paid</b> through the structure. 200+ people rewarded through trivia and Zealy quests, and the daily Zealy program I helped design grew to <b>1,000+ participants</b>.</dd>
+                    <dt>Receipts</dt>
+                    <dd><a href="https://medium.com/@singularitynetambassadors" target="_blank" rel="noopener">Ambassador publication ↗</a> <a href="https://medium.com/singularitynet-ambassador-community-page" target="_blank" rel="noopener">Community hub ↗</a></dd>
+                </dl>
+            </article>
+
+            <article class="tx searchable" data-keys="curablelabs curable dao subdao ip-nft documentation docs gitbook governance tooling">
+                <header class="tx-head">
+                    <span class="pill pill-ok">Success</span>
                     <h3>Writing down how a DAO and its SubDAO actually run</h3>
-                    <dl>
-                        <dt>Problem</dt>
-                        <dd>A DAO launching a SubDAO and IP-NFT projects had no shared playbook: how contributors join, who decides what, and which tools to use.</dd>
-                        <dt>What I did</dt>
-                        <dd>Designed a modular tooling stack and the contributor pathways and governance processes, then wrote the complete operations documentation for SubDAO and contributor processes.</dd>
-                        <dt>Result</dt>
-                        <dd>The processes were adopted across the DAO and its SubDAO, with one documented source new contributors can follow.</dd>
-                        <dt>Proof</dt>
-                        <dd><a href="https://curabledao.gitbook.io/curablelabs-docs" target="_blank">Operations documentation (GitBook)</a></dd>
-                    </dl>
-                </article>
+                    <span class="tx-org">CurableLabs · Mar 2025 – Mar 2026</span>
+                </header>
+                <dl class="tx-body">
+                    <dt>Problem</dt>
+                    <dd>A DAO launching a SubDAO and IP-NFT projects had no shared playbook: how contributors join, who decides what, and which tools to use.</dd>
+                    <dt>What I did</dt>
+                    <dd>Designed a modular tooling stack, the contributor pathways and the governance processes, then wrote the complete operations documentation for SubDAO and contributor processes.</dd>
+                    <dt>Result</dt>
+                    <dd>The processes were <b>adopted across the DAO and its SubDAO</b>, with one documented source new contributors can follow.</dd>
+                    <dt>Receipts</dt>
+                    <dd><a href="https://curabledao.gitbook.io/curablelabs-docs" target="_blank" rel="noopener">Operations documentation ↗</a></dd>
+                </dl>
+            </article>
 
-                <article class="case-card glass">
-                    <span class="case-org">Deep Funding · 2024</span>
+            <article class="tx searchable" data-keys="deep funding grants review proposals singularitynet accountability">
+                <header class="tx-head">
+                    <span class="pill pill-ok">Success</span>
                     <h3>Reviewing grant proposals with accountability in mind</h3>
-                    <dl>
-                        <dt>Problem</dt>
-                        <dd>A community-run grants program had to decide which proposals deserved funding, and needed reviews that were consistent and held teams to what they promised.</dd>
-                        <dt>What I did</dt>
-                        <dd>Served on two review circles. Assessed 50+ proposals for quality, feasibility and contributor accountability.</dd>
-                        <dt>Result</dt>
-                        <dd>The circles allocated $400k+ in community funds. I later joined the Marketing Circle (2025–26) to explain the proposal process to new applicants.</dd>
-                        <dt>Proof</dt>
-                        <dd><a href="https://twitter.com/DeepFunding/status/2019788179616764367" target="_blank">Deep Funding post</a> · <a href="https://deepfunding.ai" target="_blank">deepfunding.ai</a></dd>
-                    </dl>
-                </article>
-            </div>
+                    <span class="tx-org">Deep Funding · 2024</span>
+                </header>
+                <dl class="tx-body">
+                    <dt>Problem</dt>
+                    <dd>A community-run grants program had to decide which proposals deserved funding, and needed reviews that were consistent and held teams to what they promised.</dd>
+                    <dt>What I did</dt>
+                    <dd>Served on two review circles and assessed 50+ proposals for quality, feasibility and contributor accountability. Later joined the Marketing Circle (2025–26) to explain the proposal process to new applicants.</dd>
+                    <dt>Result</dt>
+                    <dd>The circles allocated <b>$400k+</b> in community funds.</dd>
+                    <dt>Receipts</dt>
+                    <dd><a href="https://twitter.com/DeepFunding/status/2019788179616764367" target="_blank" rel="noopener">Deep Funding post ↗</a> <a href="https://twitter.com/DeepFunding/status/2023372514248777749" target="_blank" rel="noopener">Second post ↗</a></dd>
+                </dl>
+            </article>
         </section>
 
-        <section id="services" class="section">
-            <h2 class="section-title">Services</h2>
-            <p class="section-lead">Operations is the main thing I do. These are smaller fixed-scope jobs you can hire me for on their own. Each one is quoted up front and delivered async.</p>
-            <div class="service-grid">
-                <article class="service-card glass">
-                    <span class="service-kind">Operations</span>
-                    <h3>Onboarding &amp; workflow docs</h3>
-                    <p>I document one recurring workflow, such as contributor onboarding, bounty payouts or a weekly report, as a clear SOP with templates your team can run without me.</p>
-                    <p class="service-meta">About 1–2 weeks · fixed price</p>
-                </article>
-                <article class="service-card glass">
-                    <span class="service-kind">Data</span>
-                    <h3>Dune / SQL dashboard</h3>
-                    <p>One dashboard that answers one set of business questions: holders, treasury, fees or rewards. Built in SQL on Dune, like the <a href="#data">AirSwap and BiomeAI dashboards</a>.</p>
-                    <p class="service-meta">About 1 week · fixed price</p>
-                </article>
-                <article class="service-card glass">
-                    <span class="service-kind">Content</span>
-                    <h3>Interview → article + clips</h3>
-                    <p>I turn one interview, AMA or long article into a publishable article plus short video clips for X and YouTube.</p>
-                    <p class="service-meta">About 3–5 days · fixed price</p>
-                </article>
+        <section id="builds" class="wrap block">
+            <div class="block-head">
+                <h2>Builds</h2>
+                <p>Most of these started as an operations problem I'd hit myself: late pay, contributors with no vote, payouts nobody wanted to tally. Every one has a link you can open.</p>
             </div>
-        </section>
+            <div class="filters" role="group" aria-label="Filter builds">
+                <button class="filter is-on" data-f="all" type="button">All</button>
+                <button class="filter" data-f="ops" type="button">Ops tools</button>
+                <button class="filter" data-f="payments" type="button">Payments</button>
+                <button class="filter" data-f="ai" type="button">AI agents</button>
+                <button class="filter" data-f="data" type="button">Data</button>
+                <button class="filter" data-f="edu" type="button">Education</button>
+            </div>
 
-        <section id="experience" class="section">
-            <h2 class="section-title">Experience</h2>
-            <p class="section-lead">Labels show how each role worked: paid, part-time or freelance.</p>
-            <div class="timeline">
-                <div class="timeline-item glass">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-header">
-                        <h3>Governance Lead & Ambassador</h3>
-                        <span class="company">Rejuve.AI</span>
-                        <span class="date">May 2026 – Present</span>
-                        <span class="engage">Paid · part-time</span>
-                    </div>
-                    <p>Leading DAO formation for the Rejuve longevity ecosystem: designing the off-chain voting system (Snapshot) and building the compensation-analysis and execution-planning processes for the DAO's first governance cycles. Own Discord administration, moderation, and day-to-day community operations end-to-end as the single accountable owner, and drive ecosystem growth as Ambassador through community coordination and early program initiatives.</p>
+            <div class="table builds-table">
+                <div class="row row-head" aria-hidden="true">
+                    <span>Build</span><span>What it does</span><span>Chain / stack</span><span>Status</span><span>Open</span>
                 </div>
 
-                <div class="timeline-item glass">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-header">
-                        <h3>Core Contributor</h3>
-                        <span class="company">SingularityNET Ambassador Program</span>
-                        <span class="date">Jan 2023 – Present</span>
-                        <span class="engage">Paid contributor</span>
-                    </div>
-                    <p>Designed the workgroup-led contribution and reward structure powering the Ambassador Program and created the payment structure that compensated 100+ contributors. Founded and led the Writers Workgroup, built the Marketing Guild, and led onboarding sessions and developer relations supporting ASI ecosystem growth.</p>
-                    <ul class="timeline-highlights">
-                        <li>Designed a dynamic, impact-based points system rewarding up to 15 contributors monthly.</li>
-                        <li>Led community trivia and Zealy quest programs — 200+ participants rewarded; helped design the daily Zealy program that grew to 1,000+ participants.</li>
-                    </ul>
+                <div class="row searchable build" data-tags="ops payments ai" data-keys="payday room switch arc usdc claude agents contributors payouts">
+                    <span class="b-name"><span class="ref mono"></span><b>Payday Room</b><small>Flip the Switch · WeMakeDevs × Switch</small></span>
+                    <span class="b-what">An AI agent reads what contributors claim, applies the written payout rules and drafts the payday. Two people approve in the same chat, then it pays.</span>
+                    <span class="b-chain"><i class="chain">Arc</i><i class="chain">Claude Code</i></span>
+                    <span class="b-status"><span class="pill pill-test">Testnet demo</span></span>
+                    <span class="b-links"><a href="https://youtu.be/gD8b8OmcA8c" target="_blank" rel="noopener">Demo ↗</a><a href="https://github.com/0xkenichi/payday-room" target="_blank" rel="noopener">Code ↗</a></span>
                 </div>
 
-                <div class="timeline-item glass">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-header">
-                        <h3>Builder, QBio Academy</h3>
-                        <span class="company">Quantum Biology DAO</span>
-                        <span class="date">Aug 2025 – Present</span>
-                    </div>
-                    <p>Created QBio Academy for the Quantum Biology DAO community and run it day-to-day: built the website and learner dashboard end-to-end and own day-to-day operations. Draft and review governance and community proposals — one personal proposal passed, with contributions to 4+ further proposals that passed — while driving the Education Workgroup mandate across the Governance, Communications, and Education workgroups.</p>
-                    <div class="links">
-                        <a href="https://quantum-bio-academy.vercel.app" target="_blank">QBio Academy (Live)</a>
-                    </div>
+                <div class="row searchable build" data-tags="ops" data-keys="open door near sputnik dao governance vote community calls check-in">
+                    <span class="b-name"><span class="ref mono"></span><b>Open Door</b><small>NEAR hackathon · social track</small></span>
+                    <span class="b-what">Members earn a vote in their Sputnik DAO by showing up to community calls. After enough check-ins the contract files the proposal itself.</span>
+                    <span class="b-chain"><i class="chain">NEAR</i><i class="chain">Rust</i></span>
+                    <span class="b-status"><span class="pill pill-test">Testnet</span></span>
+                    <span class="b-links"><a href="https://opendoor-door-vw50k1.testnet.page" target="_blank" rel="noopener">Live ↗</a><a href="https://github.com/0xkenichi/open-door" target="_blank" rel="noopener">Code ↗</a></span>
                 </div>
 
-                <div class="timeline-item glass">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-header">
-                        <h3>Operations & Governance Lead</h3>
-                        <span class="company">CurableLabs</span>
-                        <span class="date">Mar 2025 – Mar 2026</span>
-                    </div>
-                    <p>Designed modular DAO tooling stacks and operational frameworks for SubDAOs and IP-NFT projects. Built contributor pathways, governance processes, and coordination systems adopted across the DAO and its SubDAO, and authored the complete operations documentation suite governing SubDAO and contributor processes.</p>
-                    <div class="links">
-                        <a href="https://curabledao.gitbook.io/curablelabs-docs" target="_blank">Operations Documentation</a>
-                    </div>
+                <div class="row searchable build" data-tags="payments data" data-keys="tideover sui tatum walrus stablecoin pay late freelancers budget">
+                    <span class="b-name"><span class="ref mono"></span><b>Tideover</b><small>Tatum × Walrus hackathon · consumer finance</small></span>
+                    <span class="b-what">Learns when each payer really pays you in stablecoins, then tells you what's safe to spend until the money lands.</span>
+                    <span class="b-chain"><i class="chain">Sui</i><i class="chain">Walrus</i></span>
+                    <span class="b-status"><span class="pill pill-live">Reads mainnet</span></span>
+                    <span class="b-links"><a href="blog/tideover/">Write-up</a><a href="https://youtu.be/517fPzIV6Bg" target="_blank" rel="noopener">Demo ↗</a></span>
                 </div>
 
-                <div class="timeline-item glass">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-header">
-                        <h3>Marketing Circle Member</h3>
-                        <span class="company">Deep Funding (Deep Project)</span>
-                        <span class="date">Jun 2025 – Mar 2026</span>
-                    </div>
-                    <p>Drove marketing coordination, ecosystem engagement campaigns, and content strategy. Produced educational content explaining the Deep Funding ecosystem and proposal processes.</p>
+                <div class="row searchable build" data-tags="payments ai" data-keys="boardman avalanche usdc escrow skill games agents chess settlement">
+                    <span class="b-name"><span class="ref mono"></span><b>Boardman</b><small>Avalanche build</small></span>
+                    <span class="b-what">Two players, human or AI agent, lock the same USDC stake. The engine referees the game and the contract pays the winner in one transaction.</span>
+                    <span class="b-chain"><i class="chain">Avalanche</i><i class="chain">Solidity</i></span>
+                    <span class="b-status"><span class="pill pill-live">Live · Fuji</span></span>
+                    <span class="b-links"><a href="https://boardman.playingsidequest.fun" target="_blank" rel="noopener">Live ↗</a><a href="https://testnet.snowtrace.io/address/0x8D4cEb4A63f3Df00358F9075D24ccA4aDd1EdF6F" target="_blank" rel="noopener">On-chain ↗</a></span>
                 </div>
 
-                <div class="timeline-item glass">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-header">
-                        <h3>Review Circle Member</h3>
-                        <span class="company">Deep Funding</span>
-                        <span class="date">Jan 2024 – Dec 2024</span>
-                    </div>
-                    <p>Evaluated 50+ proposals across two funding circles that allocated $400k+ in community funds — assessing quality, feasibility, and contributor accountability for Deep Funding rounds.</p>
+                <div class="row searchable build" data-tags="payments ai" data-keys="blinkbox moonpay paybox solana blinks telegram bot usdc">
+                    <span class="b-name"><span class="ref mono"></span><b>Blinkbox</b><small>MoonPay PayBox hackathon</small></span>
+                    <span class="b-what">Send, bridge, earn and cash out from Telegram, signed by your own wallet. Also a plugin that lets AI agents run Solana blinks safely.</span>
+                    <span class="b-chain"><i class="chain">Solana</i><i class="chain">EVM</i></span>
+                    <span class="b-status"><span class="pill pill-live">Live bot</span></span>
+                    <span class="b-links"><a href="https://t.me/BlinkboxPaybot" target="_blank" rel="noopener">Bot ↗</a><a href="https://blinkbox-ten.vercel.app" target="_blank" rel="noopener">Site ↗</a></span>
                 </div>
 
-                <div class="timeline-item glass">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-header">
-                        <h3>Marketing Contributor</h3>
-                        <span class="company">SpineDAO</span>
-                        <span class="date">Feb 2025 – May 2025</span>
-                    </div>
-                    <p>Led DeSci marketing initiatives, ecosystem communications, and content amplification. Performed video editing and created visual content for social media and ecosystem growth.</p>
+                <div class="row searchable build" data-tags="ai payments" data-keys="beat the bot base stocks tokenized coinbase league ai bots erc-8004">
+                    <span class="b-name"><span class="ref mono"></span><b>Beat the Bot</b><small>Base · Stocks Maxxing build window</small></span>
+                    <span class="b-what">A weekly stock-picking league. People pick three real stocks; three AI bots pick too, with their reasons in public. Prizes paid on-chain.</span>
+                    <span class="b-chain"><i class="chain">Base</i><i class="chain">Solidity</i></span>
+                    <span class="b-status"><span class="pill pill-wip">Pre-launch</span></span>
+                    <span class="b-links"><a href="https://beat-the-bot-amber.vercel.app" target="_blank" rel="noopener">Site ↗</a><a href="https://github.com/0xkenichi/beat-the-bot" target="_blank" rel="noopener">Code ↗</a></span>
                 </div>
 
-                <div class="timeline-item glass">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-header">
-                        <h3>Marketing & Content Contributor</h3>
-                        <span class="company">AirSwap</span>
-                        <span class="date">Jan 2024 – Apr 2024</span>
-                    </div>
-                    <p>Delivered Dune dashboards for the team — Treasury, Markets, and V3 — tracking volume and protocol fees and feeding X updates to followers. Drove community growth, article creation, and contributor engagement for the AirSwap protocol.</p>
+                <div class="row searchable build" data-tags="data" data-keys="near settlement thesis investment dashboard web4 intents defillama">
+                    <span class="b-name"><span class="ref mono"></span><b>NEAR Settlement Thesis</b><small>NEAR hackathon · thesis track</small></span>
+                    <span class="b-what">An investment thesis where every number comes with its query. The dashboard recomputes each chart from public APIs in your browser.</span>
+                    <span class="b-chain"><i class="chain">NEAR web4</i><i class="chain">JS</i></span>
+                    <span class="b-status"><span class="pill pill-live">Live</span></span>
+                    <span class="b-links"><a href="https://near-settlement-thesis.testnet.page" target="_blank" rel="noopener">Dashboard ↗</a><a href="https://github.com/0xkenichi/near-settlement-thesis" target="_blank" rel="noopener">Code ↗</a></span>
                 </div>
 
-                <div class="timeline-item glass">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-header">
-                        <h3>Marketing Core</h3>
-                        <span class="company">CryptoSapiens</span>
-                        <span class="date">Aug 2023 – Jan 2025</span>
-                    </div>
-                    <p>Owned editorial strategy across Paragraph and decentralized platforms — publishing deep dives on AI & cryptography, Zarqa neural-symbolic LLMs, the ASI Alliance launch, and OpenCog Hyperon. Produced audiograms, videograms, and short-form content, edited videos and podcasts end-to-end, and built comprehensive onboarding resources for Web2-to-Web3 transitions.</p>
+                <div class="row searchable build" data-tags="ai ops" data-keys="ukweli metta agents m-pesa kenya shop ledger reconcile singularitynet">
+                    <span class="b-name"><span class="ref mono"></span><b>Ukweli</b><small>State of the Art Hackathon · SingularityNET × Omega</small></span>
+                    <span class="b-what">Two MeTTa agents, one for the shop's handwritten book and one for the M-Pesa statement, debate their differences until they agree.</span>
+                    <span class="b-chain"><i class="chain">MeTTa</i><i class="chain">Gemini</i></span>
+                    <span class="b-status"><span class="pill pill-test">Demo</span></span>
+                    <span class="b-links"><a href="https://github.com/0xkenichi/ukweli" target="_blank" rel="noopener">Code ↗</a></span>
                 </div>
 
-                <div class="timeline-item glass">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-header">
-                        <h3>Content Writer & Marketing Contributor</h3>
-                        <span class="company">HairDAO</span>
-                        <span class="date">Nov 2023 – Aug 2024</span>
-                    </div>
-                    <p>Produced research articles and educational content tailored for DeSci audiences. Executed video editing, audio editing, and social media amplification to boost ecosystem visibility.</p>
+                <div class="row searchable build" data-tags="ai" data-keys="omega grounding singularitynet nal pln metta benchmark llm facts">
+                    <span class="b-name"><span class="ref mono"></span><b>omega-grounding</b><small>For SingularityNET's Omega agent</small></span>
+                    <span class="b-what">Checks the facts an LLM hands to Omega's reasoner against trusted sources and fixes swapped relations, with a benchmark to prove it.</span>
+                    <span class="b-chain"><i class="chain">MeTTa</i><i class="chain">Python</i></span>
+                    <span class="b-status"><span class="pill pill-test">Open source</span></span>
+                    <span class="b-links"><a href="https://github.com/0xkenichi/omega-grounding" target="_blank" rel="noopener">Code ↗</a></span>
                 </div>
 
-                <div class="timeline-item glass">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-header">
-                        <h3>Technical Content Writer</h3>
-                        <span class="company">Molecule DAO</span>
-                        <span class="date">2023 – 2024</span>
-                        <span class="engage">Freelance</span>
-                    </div>
-                    <p>Delivered technical articles, research content, and educational pieces focused on the Molecule DeSci ecosystem and IP-NFT infrastructure.</p>
+                <div class="row searchable build" data-tags="edu payments" data-keys="build on bitcoin naija course lightning nigeria developers btcpay signet">
+                    <span class="b-name"><span class="ref mono"></span><b>Build on Bitcoin, Naija</b><small>Free open course · CC BY 4.0</small></span>
+                    <span class="b-what">Teaches Nigerian web developers to add Bitcoin and Lightning payments to real apps, with video, a guide and working code per module.</span>
+                    <span class="b-chain"><i class="chain">Bitcoin</i><i class="chain">Lightning</i></span>
+                    <span class="b-status"><span class="pill pill-wip">Module 1 live</span></span>
+                    <span class="b-links"><a href="https://github.com/0xkenichi/build-on-bitcoin-naija" target="_blank" rel="noopener">Course ↗</a></span>
                 </div>
 
-                <div class="timeline-item glass">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-header">
-                        <h3>Dune Analytics Specialist</h3>
-                        <span class="company">Microbiome</span>
-                        <span class="date">Sep 2025 – Oct 2025</span>
-                        <span class="engage">Freelance</span>
-                    </div>
-                    <p>Built the BiomeAI Holders &amp; Sale dashboard the team used to track trader rewards, with SQL-based on-chain analysis.</p>
+                <div class="row searchable build" data-tags="edu ops" data-keys="qbio academy quantum biology dao education learner dashboard">
+                    <span class="b-name"><span class="ref mono"></span><b>QBio Academy</b><small>Quantum Biology DAO</small></span>
+                    <span class="b-what">The DAO's education platform: website and learner dashboard, built end to end and run day to day.</span>
+                    <span class="b-chain"><i class="chain">React</i><i class="chain">Vercel</i></span>
+                    <span class="b-status"><span class="pill pill-live">Live</span></span>
+                    <span class="b-links"><a href="https://quantum-bio-academy.vercel.app" target="_blank" rel="noopener">Live ↗</a></span>
                 </div>
 
-                <div class="timeline-item glass">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-header">
-                        <h3>Content Writer & Contributor</h3>
-                        <span class="company">BanklessDAO</span>
-                        <span class="date">Sep 2022 – Mar 2023</span>
-                    </div>
-                    <p>Created educational Web3 content, contributed to frontend development tasks, and produced audiovisual content including video editing and audio production, while contributing actively to DAO coordination and governance discussions.</p>
+                <div class="row searchable build" data-tags="ops" data-keys="sidequest social quests group plans unilag lagos clips">
+                    <span class="b-name"><span class="ref mono"></span><b>sideQuest</b><small>Pilot at Unilag, Lagos</small></span>
+                    <span class="b-what">Turns group plans into quests. Crews film short proof clips and build one shared story for TikTok, Instagram or WhatsApp.</span>
+                    <span class="b-chain"><i class="chain">Web app</i></span>
+                    <span class="b-status"><span class="pill pill-live">Live pilot</span></span>
+                    <span class="b-links"><a href="https://playingsidequest.fun" target="_blank" rel="noopener">Live ↗</a></span>
                 </div>
 
-                <div class="timeline-item glass">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-header">
-                        <h3>Frontend Developer</h3>
-                        <span class="company">Ricochet Exchange</span>
-                        <span class="date">Oct 2022 – Jun 2023</span>
-                    </div>
-                    <p>Developed and maintained React frontend components for the Superfluid streaming payments platform, improving UX and functionality.</p>
-                </div>
-
-                <div class="timeline-item glass">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-header">
-                        <h3>Web Developer</h3>
-                        <span class="company">Independent</span>
-                        <span class="date">Mar 2022 – Dec 2022</span>
-                        <span class="engage">Freelance</span>
-                    </div>
-                    <p>Built responsive websites, automation tools, and web solutions for online communities and small projects.</p>
-                </div>
-
-                <div class="timeline-item glass">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-header">
-                        <h3>Content Writer & Supervisor</h3>
-                        <span class="company">Money Ninjas</span>
-                        <span class="date">Feb 2022 – Apr 2022</span>
-                    </div>
-                    <p>Led content strategy, research, and production for a finance education platform targeting Web3-curious audiences.</p>
+                <div class="row searchable build" data-tags="payments data" data-keys="vestra unlockd defi vesting locked tokens credit lending">
+                    <span class="b-name"><span class="ref mono"></span><b>Vestra</b><small>DeFi research build</small></span>
+                    <span class="b-what">Credit against locked or vesting token claims: valuation, lending and enforcement at unlock, plus a write-up on why it matters.</span>
+                    <span class="b-chain"><i class="chain">EVM</i><i class="chain">Solidity</i></span>
+                    <span class="b-status"><span class="pill pill-test">Demo</span></span>
+                    <span class="b-links"><a href="https://vestraprotocol.vercel.app" target="_blank" rel="noopener">Demo ↗</a><a href="https://paragraph.com/@0xkenichi@gmail.com/the-liquidity-paradox-unlocking-time-locked-value-in-web3" target="_blank" rel="noopener">Essay ↗</a></span>
                 </div>
             </div>
         </section>
 
-        <section id="data" class="section">
-            <h2 class="section-title">Data Work: Dune &amp; SQL</h2>
-            <p class="section-lead">On-chain dashboards in SQL built for Microbiome Labs and the AirSwap ecosystem — tracking token holders, vesting economics, treasury flows, market activity, and protocol fees. Previews below are live captures of the dashboards — click any card to open the full version. AirSwap's dashboards live under the team account at <a href="https://dune.com/airswap" target="_blank">dune.com/airswap</a>.</p>
-            <div class="projects-grid">
-                <article class="campaign-card glass">
-                    <a href="https://dune.com/0xkenichi/biomeai-holders-and-sale" target="_blank" rel="noopener"><img class="dune-preview" src="https://dune.com/public/screenshot?url=https://dune.com/0xkenichi/biomeai-holders-and-sale" alt="Live preview of the BiomeAI Holders &amp; Sale dashboard" loading="lazy"></a>
-                    <h3>BiomeAI Holders &amp; Sale</h3>
-                    <p>Holder distribution and sale tracking for the Microbiome Labs ecosystem — used by the team to monitor trader rewards.</p>
-                    <div class="links">
-                        <a href="https://dune.com/0xkenichi/biomeai-holders-and-sale" target="_blank">View dashboard</a>
-                    </div>
-                </article>
+        <section id="work" class="wrap block">
+            <div class="block-head">
+                <h2>Work history</h2>
+                <p>Every role, newest first. All paid unless marked. Tap a row for details.</p>
+            </div>
+            <div class="table work-table">
+                <div class="row row-head" aria-hidden="true">
+                    <span>Type</span><span>Role</span><span>Organization</span><span>When</span><span>Terms</span>
+                </div>
 
-                <article class="campaign-card glass">
-                    <a href="https://dune.com/airswap/AirSwap-Treasury" target="_blank" rel="noopener"><img class="dune-preview" src="https://dune.com/public/screenshot?url=https://dune.com/airswap/AirSwap-Treasury" alt="Live preview of the AirSwap Treasury dashboard" loading="lazy"></a>
-                    <h3>AirSwap Treasury</h3>
-                    <p>Treasury composition and flow analytics for the AirSwap DAO.</p>
-                    <div class="links">
-                        <a href="https://dune.com/airswap/AirSwap-Treasury" target="_blank">View dashboard</a>
-                    </div>
-                </article>
+                <details class="row searchable" data-keys="rejuve governance dao snapshot discord longevity ambassador">
+                    <summary><span class="method">Governance</span><b>Governance Lead &amp; Ambassador</b><span class="org">Rejuve.AI</span><span class="when">May 2026 – now</span><span class="pill pill-ok">Paid · part-time</span></summary>
+                    <p>Leading DAO formation for the Rejuve longevity ecosystem: designing off-chain voting on Snapshot and the compensation-analysis and execution-planning processes for the DAO's first governance cycles. Sole owner of Discord administration, moderation and day-to-day community operations.</p>
+                </details>
 
-                <article class="campaign-card glass">
-                    <a href="https://dune.com/airswap/airswap-markets" target="_blank" rel="noopener"><img class="dune-preview" src="https://dune.com/public/screenshot?url=https://dune.com/airswap/airswap-markets" alt="Live preview of the AirSwap Markets dashboard" loading="lazy"></a>
-                    <h3>AirSwap Markets</h3>
-                    <p>Market activity and trading analytics across the AirSwap protocol.</p>
-                    <div class="links">
-                        <a href="https://dune.com/airswap/airswap-markets" target="_blank">View dashboard</a>
-                    </div>
-                </article>
+                <details class="row searchable" data-keys="singularitynet snet ambassador rewards payments writers guild devrel onboarding zealy">
+                    <summary><span class="method">Rewards</span><b>Core Contributor</b><span class="org">SingularityNET Ambassador Program</span><span class="when">Jan 2023 – now</span><span class="pill pill-ok">Paid</span></summary>
+                    <p>Designed the workgroup-led contribution and reward structure and the payment structure that paid 100+ contributors. Founded the Writers Workgroup, built the Marketing Guild, and led onboarding sessions and developer relations for the ASI ecosystem. Impact-based points system rewarding up to 15 contributors a month; the daily Zealy program grew to 1,000+ participants.</p>
+                </details>
 
-                <article class="campaign-card glass">
-                    <a href="https://dune.com/airswap/airswap-v3" target="_blank" rel="noopener"><img class="dune-preview" src="https://dune.com/public/screenshot?url=https://dune.com/airswap/airswap-v3" alt="Live preview of the AirSwap V3 dashboard" loading="lazy"></a>
-                    <h3>AirSwap V3</h3>
-                    <p>Protocol v3 analytics delivered for the AirSwap team.</p>
-                    <div class="links">
-                        <a href="https://dune.com/airswap/airswap-v3" target="_blank">View dashboard</a>
-                    </div>
+                <details class="row searchable" data-keys="qbio quantum biology dao education proposals governance workgroup">
+                    <summary><span class="method">Program</span><b>Builder, QBio Academy</b><span class="org">Quantum Biology DAO</span><span class="when">Aug 2025 – now</span><span class="pill pill-ok">Paid</span></summary>
+                    <p>Built QBio Academy's website and learner dashboard end to end and run it day to day. Draft and review governance proposals: one of my own passed, and I contributed to 4+ more that passed, across the Governance, Communications and Education workgroups. <a href="https://quantum-bio-academy.vercel.app" target="_blank" rel="noopener">QBio Academy ↗</a></p>
+                </details>
+
+                <details class="row searchable" data-keys="curablelabs curable operations governance subdao ip-nft documentation">
+                    <summary><span class="method">Operations</span><b>Operations &amp; Governance Lead</b><span class="org">CurableLabs</span><span class="when">Mar 2025 – Mar 2026</span><span class="pill pill-ok">Paid</span></summary>
+                    <p>Designed modular DAO tooling and operating frameworks for SubDAOs and IP-NFT projects. Built contributor pathways, governance processes and coordination systems adopted across the DAO and its SubDAO, and wrote the full operations documentation. <a href="https://curabledao.gitbook.io/curablelabs-docs" target="_blank" rel="noopener">Docs ↗</a></p>
+                </details>
+
+                <details class="row searchable" data-keys="deep funding marketing circle content campaigns">
+                    <summary><span class="method">Program</span><b>Marketing Circle Member</b><span class="org">Deep Funding</span><span class="when">Jun 2025 – Mar 2026</span><span class="pill pill-ok">Paid</span></summary>
+                    <p>Marketing coordination, ecosystem engagement campaigns and content strategy. Produced educational content explaining Deep Funding and its proposal process.</p>
+                </details>
+
+                <details class="row searchable" data-keys="spinedao desci marketing video">
+                    <summary><span class="method">Content</span><b>Marketing Contributor</b><span class="org">SpineDAO</span><span class="when">Feb – May 2025</span><span class="pill pill-ok">Paid</span></summary>
+                    <p>DeSci marketing, ecosystem communications and content amplification, including video editing and visual content.</p>
+                </details>
+
+                <details class="row searchable" data-keys="deep funding review grants proposals">
+                    <summary><span class="method">Review</span><b>Review Circle Member</b><span class="org">Deep Funding</span><span class="when">Jan – Dec 2024</span><span class="pill pill-ok">Paid</span></summary>
+                    <p>Evaluated 50+ proposals across two funding circles that allocated $400k+ in community funds, assessing quality, feasibility and contributor accountability.</p>
+                </details>
+
+                <details class="row searchable" data-keys="airswap dune sql dashboards treasury markets content">
+                    <summary><span class="method">Data</span><b>Marketing &amp; Content Contributor</b><span class="org">AirSwap</span><span class="when">Jan – Apr 2024</span><span class="pill pill-ok">Paid</span></summary>
+                    <p>Built the Treasury, Markets and V3 Dune dashboards tracking volume and protocol fees, which fed the team's updates on X. Also community growth and articles.</p>
+                </details>
+
+                <details class="row searchable" data-keys="cryptosapiens editorial paragraph video podcast onboarding">
+                    <summary><span class="method">Content</span><b>Marketing Core</b><span class="org">CryptoSapiens</span><span class="when">Aug 2023 – Jan 2025</span><span class="pill pill-ok">Paid</span></summary>
+                    <p>Owned editorial strategy on Paragraph: deep dives on AI and cryptography, Zarqa, the ASI Alliance launch and OpenCog Hyperon. Edited videos and podcasts end to end and built Web2-to-Web3 onboarding resources.</p>
+                </details>
+
+                <details class="row searchable" data-keys="hairdao desci research writing video">
+                    <summary><span class="method">Content</span><b>Content Writer &amp; Marketing</b><span class="org">HairDAO</span><span class="when">Nov 2023 – Aug 2024</span><span class="pill pill-ok">Paid</span></summary>
+                    <p>Research articles and educational content for DeSci audiences, plus video and audio editing.</p>
+                </details>
+
+                <details class="row searchable" data-keys="molecule desci ip-nft technical writing">
+                    <summary><span class="method">Content</span><b>Technical Content Writer</b><span class="org">Molecule DAO</span><span class="when">2023 – 2024</span><span class="pill pill-ok">Paid · freelance</span></summary>
+                    <p>Technical articles and research on the Molecule DeSci ecosystem and IP-NFT infrastructure.</p>
+                </details>
+
+                <details class="row searchable" data-keys="microbiome biomeai dune sql dashboard">
+                    <summary><span class="method">Data</span><b>Dune Analytics Specialist</b><span class="org">Microbiome</span><span class="when">Sep – Oct 2025</span><span class="pill pill-ok">Paid · freelance</span></summary>
+                    <p>Built the BiomeAI Holders &amp; Sale dashboard the team used to track trader rewards. <a href="https://dune.com/0xkenichi/biomeai-holders-and-sale" target="_blank" rel="noopener">Dashboard ↗</a></p>
+                </details>
+
+                <details class="row searchable" data-keys="ricochet superfluid react frontend developer">
+                    <summary><span class="method">Dev</span><b>Frontend Developer</b><span class="org">Ricochet Exchange</span><span class="when">Oct 2022 – Jun 2023</span><span class="pill pill-ok">Paid</span></summary>
+                    <p>Built and maintained React components for the Superfluid streaming-payments app.</p>
+                </details>
+
+                <details class="row searchable" data-keys="bankless banklessdao content frontend video">
+                    <summary><span class="method">Content</span><b>Content Writer &amp; Contributor</b><span class="org">BanklessDAO</span><span class="when">Sep 2022 – Mar 2023</span><span class="pill pill-ok">Paid</span></summary>
+                    <p>Educational Web3 content, frontend tasks, and video and audio production; active in DAO coordination and governance.</p>
+                </details>
+
+                <details class="row searchable" data-keys="web developer websites automation freelance">
+                    <summary><span class="method">Dev</span><b>Web Developer</b><span class="org">Independent</span><span class="when">Mar – Dec 2022</span><span class="pill pill-ok">Paid · freelance</span></summary>
+                    <p>Responsive websites and automation tools for online communities and small projects.</p>
+                </details>
+
+                <details class="row searchable" data-keys="money ninjas finance education content volunteer">
+                    <summary><span class="method">Content</span><b>Content Writer &amp; Supervisor</b><span class="org">Money Ninjas</span><span class="when">Feb – Apr 2022</span><span class="pill pill-vol">Volunteer</span></summary>
+                    <p>Led content strategy, research and production for a finance education platform for Web3-curious readers.</p>
+                </details>
+            </div>
+        </section>
+
+        <section id="services" class="wrap block">
+            <div class="block-head">
+                <h2>Hire for</h2>
+                <p>The main job is operations, full-time or on contract. The rest are smaller fixed-price jobs you can call on their own.</p>
+            </div>
+            <div class="fns">
+                <article class="fn fn-main searchable" data-keys="operations sop onboarding workflow documentation payouts reporting program coordinator">
+                    <code class="fn-sig"><span class="fn-n">1</span><b>runOperations</b>(<i>team</i>)</code>
+                    <p>Ops and program lead for a distributed team: contributor onboarding, docs, payment tracking, reporting and community programs.</p>
+                    <div class="fn-foot"><span class="fn-meta">contract or full-time</span><a class="btn btn-solid btn-sm" href="mailto:0xkenichi@gmail.com?subject=Operations%20role">Write</a></div>
+                </article>
+                <article class="fn searchable" data-keys="sop documentation onboarding workflow templates">
+                    <code class="fn-sig"><span class="fn-n">2</span><b>documentWorkflow</b>(<i>process</i>)</code>
+                    <p>One recurring workflow, such as onboarding, bounty payouts or a weekly report, written as an SOP with templates your team can run without me.</p>
+                    <div class="fn-foot"><span class="fn-meta">~1–2 weeks · fixed price</span><a class="btn btn-sm" href="mailto:0xkenichi@gmail.com?subject=Workflow%20docs">Write</a></div>
+                </article>
+                <article class="fn searchable" data-keys="dune sql dashboard data analytics on-chain">
+                    <code class="fn-sig"><span class="fn-n">3</span><b>buildDashboard</b>(<i>questions</i>)</code>
+                    <p>One Dune dashboard in SQL that answers one set of business questions: holders, treasury, fees or rewards.</p>
+                    <div class="fn-foot"><span class="fn-meta">~1 week · fixed price</span><a class="btn btn-sm" href="mailto:0xkenichi@gmail.com?subject=Dune%20dashboard">Write</a></div>
+                </article>
+                <article class="fn searchable" data-keys="content article video clips interview repurpose">
+                    <code class="fn-sig"><span class="fn-n">4</span><b>repurpose</b>(<i>interview</i>)</code>
+                    <p>One interview, AMA or long article turned into a publishable article plus short clips for X and YouTube.</p>
+                    <div class="fn-foot"><span class="fn-meta">~3–5 days · fixed price</span><a class="btn btn-sm" href="mailto:0xkenichi@gmail.com?subject=Article%20%2B%20clips">Write</a></div>
                 </article>
             </div>
         </section>
 
-        <section id="editorial" class="section">
-            <h2 class="section-title">Writing</h2>
-            <p class="section-lead">100+ technical articles published across the SingularityNET, CryptoSapiens, Molecule DAO, HairDAO, BanklessDAO, and Quantum Biology DAO ecosystems.</p>
-            <div class="projects-grid">
-                <article class="campaign-card glass">
-                    <h3>SingularityNET Ambassador Medium</h3>
-                    <p>Established and managed the official publication hubs for the SingularityNET Ambassador Program. Spearheaded the Writer Workgroup to scale community storytelling and educational initiatives.</p>
-                    <div class="links">
-                        <a href="https://medium.com/@singularitynetambassadors" target="_blank">Ambassador Page</a>
-                        <a href="https://medium.com/singularitynet-ambassador-community-page" target="_blank">Community Hub</a>
-                    </div>
-                </article>
-
-                <article class="campaign-card glass">
-                    <h3>CryptoSapiens Publications</h3>
-                    <p>Stewarding editorial strategy across Paragraph and decentralized news platforms. Translating complex Web3 discussions into accessible long-form and short-form content.</p>
-                    <div class="links">
-                        <a href="https://paragraph.com/@crypto-sapiens" target="_blank">Paragraph Hub</a>
-                        <a href="https://paragraph.com/0xb2cccac46ce93c2ac27fdbf7248938cc57f29424" target="_blank">Editorial Feed</a>
-                        <a href="https://news.cryptosapiens.xyz/" target="_blank">Newsletter</a>
-                    </div>
-                </article>
+        <section id="data" class="wrap block">
+            <div class="block-head">
+                <h2>Data</h2>
+                <p>On-chain dashboards in SQL. The previews are live captures from Dune.</p>
+            </div>
+            <div class="dash-grid">
+                <a class="dash searchable" data-keys="biomeai microbiome dune holders sale" href="https://dune.com/0xkenichi/biomeai-holders-and-sale" target="_blank" rel="noopener">
+                    <img src="https://dune.com/public/screenshot?url=https://dune.com/0xkenichi/biomeai-holders-and-sale" alt="BiomeAI Holders and Sale dashboard" loading="lazy">
+                    <span><b>BiomeAI Holders &amp; Sale</b><small>Microbiome · trader rewards</small></span>
+                </a>
+                <a class="dash searchable" data-keys="airswap treasury dune" href="https://dune.com/airswap/AirSwap-Treasury" target="_blank" rel="noopener">
+                    <img src="https://dune.com/public/screenshot?url=https://dune.com/airswap/AirSwap-Treasury" alt="AirSwap Treasury dashboard" loading="lazy">
+                    <span><b>AirSwap Treasury</b><small>Treasury composition and flows</small></span>
+                </a>
+                <a class="dash searchable" data-keys="airswap markets dune trading" href="https://dune.com/airswap/airswap-markets" target="_blank" rel="noopener">
+                    <img src="https://dune.com/public/screenshot?url=https://dune.com/airswap/airswap-markets" alt="AirSwap Markets dashboard" loading="lazy">
+                    <span><b>AirSwap Markets</b><small>Market activity and volume</small></span>
+                </a>
+                <a class="dash searchable" data-keys="airswap v3 dune fees protocol" href="https://dune.com/airswap/airswap-v3" target="_blank" rel="noopener">
+                    <img src="https://dune.com/public/screenshot?url=https://dune.com/airswap/airswap-v3" alt="AirSwap V3 dashboard" loading="lazy">
+                    <span><b>AirSwap V3</b><small>Protocol fees</small></span>
+                </a>
             </div>
         </section>
 
-        <section id="spotlight" class="section">
-            <h2 class="section-title">Selected Articles</h2>
-            <div class="projects-grid">
-                <article class="campaign-card glass">
-                    <h3>AI & Cryptography</h3>
-                    <p>Exploring the intersection of advanced AI and zero-knowledge proofs to enhance digital security and privacy.</p>
-                    <div class="links">
-                        <a href="https://medium.com/@singularitynetambassadors/ai-cryptography-enhancing-security-and-privacy-in-the-digital-age-db5c1bbf5fdb" target="_blank">Read Article</a>
-                    </div>
-                </article>
-
-                <article class="campaign-card glass">
-                    <h3>Zarqa: Neural-Symbolic LLMs</h3>
-                    <p>A deep dive into the next generation of LLMs that combine neural networks with symbolic reasoning for more robust AGI.</p>
-                    <div class="links">
-                        <a href="https://medium.com/@singularitynetambassadors/zarqa-the-next-generation-of-neural-symbolic-llms-321094df3fb9" target="_blank">Read Article</a>
-                    </div>
-                </article>
-
-                <article class="campaign-card glass">
-                    <h3>The ASI Alliance Launch</h3>
-                    <p>Breaking ground in the quest for Artificial Superintelligence through the historic alliance of top decentralised AI projects.</p>
-                    <div class="links">
-                        <a href="https://medium.com/@singularitynetambassadors/breaking-ground-in-ai-the-launch-of-the-artificial-superintelligence-alliance-4361f4d9576b" target="_blank">Read Article</a>
-                    </div>
-                </article>
-
-                <article class="campaign-card glass">
-                    <h3>OpenCog Hyperon & AGI</h3>
-                    <p>Detailing the leap forward in AI evolution through the OpenCog Hyperon framework and its role in building beneficial AGI.</p>
-                    <div class="links">
-                        <a href="https://medium.com/@singularitynetambassadors/building-beneficial-agi-with-opencog-hyperon-a-leap-forward-in-ai-evolution-9eb5a3b8b059" target="_blank">Read Article</a>
-                    </div>
-                </article>
+        <section id="writing" class="wrap block">
+            <div class="block-head">
+                <h2>Writing &amp; video</h2>
+                <p>100+ articles across SingularityNET, CryptoSapiens, Molecule, HairDAO, BanklessDAO and Quantum Biology DAO.</p>
             </div>
+            <ol class="logs">
+                <li class="searchable" data-keys="tari video explainer stealth addresses payments"><span class="log-kind">Video</span><a href="https://youtu.be/CM1ZThyZr08" target="_blank" rel="noopener">How Tari lets you get paid while you're offline</a><span class="log-where">YouTube</span></li>
+                <li class="searchable" data-keys="tideover write-up blog stablecoin"><span class="log-kind">Essay</span><a href="blog/tideover/">Tideover: budgeting for pay that comes late</a><span class="log-where">this site</span></li>
+                <li class="searchable" data-keys="vesting liquidity paradox defi"><span class="log-kind">Essay</span><a href="https://paragraph.com/@0xkenichi@gmail.com/the-liquidity-paradox-unlocking-time-locked-value-in-web3" target="_blank" rel="noopener">The Liquidity Paradox: unlocking time-locked value</a><span class="log-where">Paragraph</span></li>
+                <li class="searchable" data-keys="ai cryptography privacy zero knowledge"><span class="log-kind">Article</span><a href="https://medium.com/@singularitynetambassadors/ai-cryptography-enhancing-security-and-privacy-in-the-digital-age-db5c1bbf5fdb" target="_blank" rel="noopener">AI &amp; cryptography: security and privacy</a><span class="log-where">SingularityNET</span></li>
+                <li class="searchable" data-keys="zarqa neural symbolic llm"><span class="log-kind">Article</span><a href="https://medium.com/@singularitynetambassadors/zarqa-the-next-generation-of-neural-symbolic-llms-321094df3fb9" target="_blank" rel="noopener">Zarqa: neural-symbolic LLMs</a><span class="log-where">SingularityNET</span></li>
+                <li class="searchable" data-keys="asi alliance launch"><span class="log-kind">Article</span><a href="https://medium.com/@singularitynetambassadors/breaking-ground-in-ai-the-launch-of-the-artificial-superintelligence-alliance-4361f4d9576b" target="_blank" rel="noopener">The launch of the ASI Alliance</a><span class="log-where">SingularityNET</span></li>
+                <li class="searchable" data-keys="opencog hyperon agi"><span class="log-kind">Article</span><a href="https://medium.com/@singularitynetambassadors/building-beneficial-agi-with-opencog-hyperon-a-leap-forward-in-ai-evolution-9eb5a3b8b059" target="_blank" rel="noopener">Building beneficial AGI with OpenCog Hyperon</a><span class="log-where">SingularityNET</span></li>
+                <li class="searchable" data-keys="cryptosapiens paragraph hub"><span class="log-kind">Hub</span><a href="https://paragraph.com/@crypto-sapiens" target="_blank" rel="noopener">CryptoSapiens on Paragraph</a><span class="log-where">editorial</span></li>
+                <li class="searchable" data-keys="singularitynet ambassador medium hub"><span class="log-kind">Hub</span><a href="https://medium.com/@singularitynetambassadors" target="_blank" rel="noopener">SingularityNET Ambassador publication</a><span class="log-where">editorial</span></li>
+            </ol>
+            <p class="small-print">Education: B.Sc. Economics, University of Lagos · ND Cooperative Economics, Federal Cooperative College, Ibadan.</p>
         </section>
 
-        <section id="featured-content" class="section">
-            <h2 class="section-title">Featured Content</h2>
-            <div class="content-grid">
-                <div class="embed-card glass">
-                    <blockquote class="twitter-tweet" data-theme="dark"><a href="https://twitter.com/DeepFunding/status/2019788179616764367"></a></blockquote>
-                </div>
-                <div class="embed-card glass">
-                    <blockquote class="twitter-tweet" data-theme="dark"><a href="https://twitter.com/Spine_DAO/status/1891487777830683079"></a></blockquote>
-                </div>
-                <div class="embed-card glass">
-                    <blockquote class="twitter-tweet" data-theme="dark"><a href="https://twitter.com/Spine_DAO/status/1897302798150328403"></a></blockquote>
-                </div>
-                <div class="embed-card glass">
-                    <blockquote class="twitter-tweet" data-theme="dark"><a href="https://twitter.com/DeepFunding/status/2023372514248777749"></a></blockquote>
-                </div>
+        <p class="wrap empty" id="empty" hidden>Nothing on this page matches that. Try another word.</p>
+
+        <section id="contact" class="wrap contact">
+            <div>
+                <p class="eyebrow">Next block</p>
+                <h2>Got operations that need running?</h2>
+                <p>Send the problem in a line or two. I reply within a day, from Lagos (UTC+1).</p>
             </div>
-        </section>
-
-        <section id="skills" class="section">
-            <h2 class="section-title">Core Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category glass">
-                    <h3><i class="fas fa-clipboard-check"></i> Operations</h3>
-                    <div class="tags">
-                        <span>SOP Development</span>
-                        <span>KPI Tracking</span>
-                        <span>Workflow Optimization</span>
-                        <span>Documentation</span>
-                        <span>Onboarding Coordination</span>
-                        <span>Compliance Records</span>
-                        <span>Reporting Templates</span>
-                    </div>
-                </div>
-                <div class="skill-category glass">
-                    <h3><i class="fas fa-governance"></i> DAO & Gov</h3>
-                    <div class="tags">
-                        <span>Governance Design</span>
-                        <span>Reward / Payment Structures</span>
-                        <span>SBT Reputation Systems</span>
-                        <span>Contributor Frameworks</span>
-                        <span>Ambassador Programs</span>
-                        <span>Modular Tooling</span>
-                    </div>
-                </div>
-                <div class="skill-category glass">
-                    <h3><i class="fas fa-pen"></i> Content & Media</h3>
-                    <div class="tags">
-                        <span>Technical Content Writing</span>
-                        <span>Research & Articles</span>
-                        <span>Video Editing</span>
-                        <span>Audio Editing</span>
-                        <span>Audiovisual Production</span>
-                        <span>Audiograms / Videograms</span>
-                    </div>
-                </div>
-                <div class="skill-category glass">
-                    <h3><i class="fas fa-chart-line"></i> Data & Analytics</h3>
-                    <div class="tags">
-                        <span>Dune Analytics</span>
-                        <span>SQL</span>
-                        <span>Data Visualization</span>
-                        <span>On-Chain Analytics</span>
-                        <span>Dashboard Creation</span>
-                    </div>
-                </div>
-                <div class="skill-category glass">
-                    <h3><i class="fas fa-users"></i> Community & Growth</h3>
-                    <div class="tags">
-                        <span>Developer Relations</span>
-                        <span>Event Facilitation</span>
-                        <span>Web3 Marketing</span>
-                        <span>Content Strategy</span>
-                        <span>University Outreach</span>
-                        <span>Social Media Marketing</span>
-                    </div>
-                </div>
-                <div class="skill-category glass">
-                    <h3><i class="fas fa-code"></i> Technology</h3>
-                    <div class="tags">
-                        <span>React / Vite</span>
-                        <span>Node.js</span>
-                        <span>Python</span>
-                        <span>ASI Chain / MeTTa</span>
-                        <span>Soulbound Tokens</span>
-                        <span>IPFS / Rust</span>
-                    </div>
-                </div>
-                <div class="skill-category glass">
-                    <h3><i class="fas fa-video"></i> Media Production</h3>
-                    <div class="tags">
-                        <span>Adobe Premiere Pro</span>
-                        <span>After Effects</span>
-                        <span>Riverside</span>
-                        <span>Descript</span>
-                        <span>Figma</span>
-                        <span>Technical Writing</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="section">
-            <h2 class="section-title">Side Projects</h2>
-            <p class="section-lead">Things I build on my own time. They show I can ship, but they are not what I am offering as a service.</p>
-            <div class="projects-grid">
-                <article class="campaign-card glass">
-                    <div class="protocol-header">
-                        <h3>Boardman</h3>
-                        <span class="status-tag status-active">Building now</span>
-                    </div>
-                    <p>Agentic gaming protocol: humans play 1v1 for stake and AI agents play chess for real money — dual-lock USDC escrow, screenshot settlement, live on Arc testnet. Chess is live; watch Raja vs Nero.</p>
-                    <div class="links">
-                        <a href="https://boardman.playingsidequest.fun/" target="_blank">boardman.playingsidequest.fun</a>
-                    </div>
-                </article>
-
-                <article class="campaign-card glass">
-                    <div class="protocol-header">
-                        <h3>sideQuest</h3>
-                        <span class="status-tag status-active">Building now</span>
-                    </div>
-                    <p>Social coordination platform that turns group plans into quests — crews film short proof clips and build one shared story for TikTok, IG, or WhatsApp. Live pilot at Unilag, Lagos.</p>
-                    <div class="links">
-                        <a href="https://playingsidequest.fun/" target="_blank">playingsidequest.fun</a>
-                    </div>
-                </article>
-
-                <article class="campaign-card glass">
-                    <div class="protocol-header">
-                        <h3>Vestra Protocol</h3>
-                        <span class="status-tag status-completed">Completed</span>
-                    </div>
-                    <p>Founded and built an experimental DeFi primitive focused on unlocking liquidity for vested tokens through multi-chain portfolios, borrowing integration, oracles, and AI risk models — including the private Vesting Economy dashboard on Dune.</p>
-                    <div class="links">
-                        <a href="https://paragraph.com/@0xkenichi@gmail.com/the-liquidity-paradox-unlocking-time-locked-value-in-web3" target="_blank">The Liquidity Paradox (Blog)</a>
-                        <a href="https://x.com/VestraProtocol" target="_blank"><i class="fab fa-x-twitter"></i> X (@VestraProtocol)</a>
-                        <a href="https://github.com/0xkenichi" target="_blank">GitHub</a>
-                    </div>
-                </article>
-
-                <article class="campaign-card glass">
-                    <div class="protocol-header">
-                        <h3>SBT Reputation System</h3>
-                        <span class="status-tag status-active">Lead Architect</span>
-                    </div>
-                    <p>Designed a system linking contribution, validation, treasury payouts, and governance influence via Soulbound Tokens.</p>
-                </article>
-
-                <article class="campaign-card glass">
-                    <div class="protocol-header">
-                        <h3>Legacy Protocol</h3>
-                        <span class="status-tag status-paused">Paused</span>
-                    </div>
-                    <p>A Web3 Reputation and Identity system for contributors. Built in 2024 to enable on-chain credentials and verifiable contribution history.</p>
-                    <p style="font-size: 0.85rem; color: #94a3b8; margin-top: -0.5rem;"><em>Paused - Awaiting more funds to return to best state.</em></p>
-                </article>
-
-                <article class="campaign-card glass">
-                    <div class="protocol-header">
-                        <h3>Podcast & Audiovisual Media Production</h3>
-                        <span class="status-tag status-paused">Paused</span>
-                    </div>
-                    <p>Translated long-form Web3 discussions into accessible educational short-form content including audiograms, videograms, video edits, and social media shorts across multiple DAOs and ecosystems.</p>
-                </article>
-
-                <article class="campaign-card glass">
-                    <div class="protocol-header">
-                        <h3>Developer Outreach & ASI Ecosystem Expansion</h3>
-                        <span class="status-tag status-paused">Shelved</span>
-                    </div>
-                    <p>Designed the vision for ASI developer clubs, campus communities, and grassroots adoption programs across Nigerian universities (Unilag, UI, etc.) and West Africa.</p>
-                    <p style="font-size: 0.85rem; color: #94a3b8; margin-top: -0.5rem;"><em>Shelved — not funded before the Deep Funding ecosystem wound down.</em></p>
-                </article>
-            </div>
-        </section>
-
-        <section id="education" class="section">
-            <h2 class="section-title">Education</h2>
-            <div class="education-grid">
-                <div class="edu-card glass">
-                    <h3>B.Sc Economics</h3>
-                    <p>University of Lagos</p>
-                </div>
-                <div class="edu-card glass">
-                    <h3>ND Cooperative Economics</h3>
-                    <p>Federal Cooperative College, Ibadan</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="section contact-section glass">
-            <h2>Need operations help?</h2>
-            <p>I'm available for paid contract or full-time work in Web3 operations and program coordination, from Lagos or remote. Send me the problem in a line or two and I'll reply within a day.</p>
             <div class="contact-links">
-                <a href="https://x.com/0xKenichi" target="_blank" class="contact-card glass">
-                    <i class="fab fa-x-twitter"></i>
-                    <span>@0xKenichi</span>
-                </a>
-                <a href="mailto:0xkenichi@gmail.com" class="contact-card glass">
-                    <i class="fas fa-envelope"></i>
-                    <span>0xkenichi@gmail.com</span>
-                </a>
-                <a href="https://www.linkedin.com/in/finch-vestra/" target="_blank" class="contact-card glass">
-                    <i class="fab fa-linkedin"></i>
-                    <span>LinkedIn Profile</span>
-                </a>
+                <a class="btn btn-solid" href="mailto:0xkenichi@gmail.com?subject=Operations%20work">0xkenichi@gmail.com</a>
+                <a class="btn" href="https://x.com/0xKenichi" target="_blank" rel="noopener">X @0xKenichi</a>
+                <a class="btn" href="https://www.linkedin.com/in/finch-vestra/" target="_blank" rel="noopener">LinkedIn</a>
+                <a class="btn" href="https://t.me/stillkenichi" target="_blank" rel="noopener">Telegram</a>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p class="footer-text">Built with 🤍 by Kenichi</p>
+    <footer class="wrap footer">
+        <span class="mono">block #2026 · confirmed</span>
+        <span>Built by hand by Kenichi</span>
     </footer>
 
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    <script src="main.js"></script>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="main.js?v=2"></script>
 </body>
 </html>
