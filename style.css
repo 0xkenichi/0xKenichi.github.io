@@ -629,3 +629,128 @@ nav a.cv-nav {
     transform: translateY(-2px);
     box-shadow: 0 8px 24px rgba(14, 165, 233, 0.25);
 }
+
+/* Lead offer, case studies, services (Nov 2026) */
+.hero-role {
+    color: var(--primary-color);
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.hero-offer {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    max-width: 40rem;
+    margin-bottom: 1.25rem;
+}
+
+.hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1.25rem 0 2rem;
+}
+
+.cta-btn {
+    padding: 0.8rem 1.6rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    border: 1px solid var(--primary-color);
+}
+
+.cta-primary {
+    background: var(--primary-color);
+    color: #0f172a;
+}
+
+.cta-primary:hover {
+    background: #38bdf8;
+    color: #0f172a;
+    text-shadow: none;
+}
+
+.cta-ghost {
+    color: var(--primary-color);
+}
+
+.case-grid,
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+}
+
+.case-card,
+.service-card {
+    padding: 1.6rem;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 1.25rem;
+}
+
+.case-org,
+.service-kind {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.case-card h3,
+.service-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.case-card dt {
+    font-weight: 600;
+    color: var(--text-color);
+    margin-top: 0.9rem;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.case-card dd {
+    color: #cbd5e1;
+    font-size: 0.97rem;
+}
+
+.service-card p {
+    color: #cbd5e1;
+}
+
+.service-meta {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: #94a3b8 !important;
+}
+
+.engage {
+    display: inline-block;
+    margin-top: 0.4rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 0.15rem 0.6rem;
+    border-radius: 1rem;
+    color: #10b981;
+    background: rgba(16, 185, 129, 0.15);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+@media (max-width: 600px) {
+    .hero-role { font-size: 1.3rem; }
+    .case-card, .service-card { padding: 1.4rem; }
+}
+
+@media (max-width: 968px) {
+    .hero-ctas { justify-content: center; }
+    .hero-offer { margin-left: auto; margin-right: auto; }
+}
