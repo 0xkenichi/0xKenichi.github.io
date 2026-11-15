@@ -87,4 +87,44 @@
         }, { rootMargin: '-45% 0px -50% 0px' });
         document.querySelectorAll('.block').forEach(function (s) { io.observe(s); });
     }
+
+    // Motion: scroll progress, reveal on scroll, count-up stats
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var bar = document.getElementById('progress');
+    function prog() {
+        var h = document.documentElement.scrollHeight - window.innerHeight;
+        if (bar) bar.style.transform = 'scaleX(' + (h > 0 ? Math.min(1, window.scrollY / h) : 0) + ')';
+    }
+    window.addEventListener('scroll', prog, { passive: true }); prog();
+
+    function countUp(el) {
+        var m = /^(\D*)([\d,]+)(.*)$/.exec(el.textContent.trim());
+        if (!m) return;
+        var end = parseInt(m[2].replace(/,/g, ''), 10), comma = m[2].indexOf(',') !== -1, t0 = null;
+        function step(t) {
+            if (!t0) t0 = t;
+            var k = Math.min(1, (t - t0) / 1100), v = Math.round(end * (1 - Math.pow(1 - k, 3)));
+            el.textContent = m[1] + (comma ? v.toLocaleString('en-US') : v) + m[3];
+            if (k < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+    }
+    if (!reduce && 'IntersectionObserver' in window) {
+        var groups = ['.overview .card', '.block-head', '.tx', '.table', '.fn', '.dash', '.logs', '.contact'];
+        var rio = new IntersectionObserver(function (entries) {
+            entries.forEach(function (en) {
+                if (!en.isIntersecting) return;
+                en.target.classList.add('in');
+                en.target.querySelectorAll('.kv-num dd').forEach(countUp);
+                rio.unobserve(en.target);
+            });
+        }, { rootMargin: '0px 0px -6% 0px', threshold: 0 });
+        groups.forEach(function (sel) {
+            document.querySelectorAll(sel).forEach(function (el, i) {
+                el.classList.add('reveal');
+                el.style.setProperty('--d', (Math.min(i, 5) * 0.07) + 's');
+                rio.observe(el);
+            });
+        });
+    }
 })();

@@ -9,13 +9,14 @@
     <meta property="og:description" content="Every role, build and result on one page, with receipts.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=3">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=4">
     <script>
         try { var t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
     </script>
 </head>
 <body>
+    <div class="progress" id="progress" aria-hidden="true"></div>
     <header class="topbar">
         <div class="wrap topbar-inner">
             <a href="#top" class="brand"><span class="brand-mark" aria-hidden="true"></span>kenichi<span class="brand-dim">/explorer</span></a>
@@ -35,7 +36,9 @@
     </header>
 
     <main id="top">
-        <section class="wrap address">
+        <div class="wrap hero">
+        <div class="hero-copy">
+        <section class="address">
             <img src="https://pbs.twimg.com/profile_images/1901377670950031360/hdfn91xq.jpg" alt="Kenichi's avatar" class="avatar" width="72" height="72">
             <div class="address-main">
                 <p class="eyebrow">Address</p>
@@ -51,7 +54,7 @@
             </div>
         </section>
 
-        <section class="wrap pitch">
+        <section class="pitch">
             <p class="pitch-text">I build clear workflows for distributed teams: <mark>contributor onboarding, documentation, payment tracking, reporting and community programs.</mark> When the tool doesn't exist, I build that too.</p>
             <div class="pitch-side">
                 <p class="status"><span class="dot" aria-hidden="true"></span>Available for paid contract or full-time work · remote</p>
@@ -62,6 +65,10 @@
                 </div>
             </div>
         </section>
+
+        </div>
+        <div class="hero-scene" id="scene" aria-hidden="true"><canvas id="scene-canvas"></canvas><span class="scene-hint mono">block #14 · tap me</span></div>
+        </div>
 
         <section class="wrap overview" aria-label="Overview">
             <div class="card">
@@ -507,6 +514,8 @@
     </footer>
 
     <div id="toast" class="toast" role="status" aria-live="polite"></div>
-    <script src="main.js?v=2"></script>
+    <script src="main.js?v=3"></script>
+    <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+    <script type="module" src="scene.js?v=1"></script>
 </body>
 </html>
