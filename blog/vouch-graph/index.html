@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vouch Graph: hiring contributors by who they shipped with, on HydraDB | Kenichi</title>
+    <meta name="description" content="Communities hire on trust, but trust lives in people's heads. I built Vouch Graph on the open-source HydraDB engine and SelfGraph: it finds contributors by who they've actually shipped with, and gets sharper with every hire.">
+    <meta property="og:title" content="Vouch Graph: hiring contributors by who they shipped with, on HydraDB">
+    <meta property="og:description" content="Built for the HydraDB hackathon. Hire success went from 50% to 90% over 10 rounds; profile search stayed at 65%.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg:#0f172a; --text:#e2e8f0; --muted:#94a3b8; --heading:#f8fafc; --accent:#0ea5e9; --line:rgba(255,255,255,.1); --card:rgba(30,41,59,.7); }
+        * { box-sizing: border-box; }
+        body { margin:0; background:var(--bg); color:var(--text); font-family:'Inter',sans-serif; font-size:18px; line-height:1.7; }
+        a { color: var(--accent); }
+        .top, article { max-width:760px; margin:0 auto; padding:24px 16px 0; }
+        .top a { text-decoration:none; font-family:'Outfit',sans-serif; font-weight:700; font-size:20px; color:var(--heading); }
+        article { padding-bottom:64px; }
+        h1 { font-family:'Outfit',sans-serif; color:var(--heading); font-size:clamp(30px,5vw,42px); line-height:1.15; margin:28px 0 8px; }
+        h2 { font-family:'Outfit',sans-serif; color:var(--heading); font-size:24px; margin:40px 0 8px; }
+        .meta { color:var(--muted); font-size:15px; }
+        pre, code { font-family:'JetBrains Mono',monospace; font-size:14px; }
+        pre { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px 16px; overflow-x:auto; line-height:1.5; }
+        table { border-collapse:collapse; width:100%; font-size:16px; margin:12px 0; }
+        td, th { border-bottom:1px solid var(--line); padding:8px 6px; text-align:left; }
+        .box { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 18px; margin:18px 0; }
+    </style>
+</head>
+<body>
+<div class="top"><a href="/">← Kenichi</a></div>
+<article>
+<h1>Vouch Graph: hiring contributors by who they shipped with</h1>
+<p class="meta">16 Nov 2026 · built for the HydraDB hackathon (Track 1, the self-improving graph) · <a href="https://0xkenichi.github.io/vouch-graph/">live page</a> · <a href="https://github.com/0xkenichi/vouch-graph">code</a> · <a href="https://youtu.be/Lbn-1gEQjpU">62-second demo</a></p>
+
+<p>I've run community ops and contributor rewards for DAOs for four years. The hardest call every month isn't paying people. It's deciding who to ask. When a community needs someone to host a Yoruba onboarding call, the job usually goes to whoever is loudest in the Discord, or a friend of the lead.</p>
+
+<p>The trust that should decide it does exist, but it lives in people's heads: "Ngozi ran the onboarding calls with me, and Femi translated the roadmap with her." Nobody writes that down, so nobody can search it.</p>
+
+<p>Search makes it worse. Put everyone's bio in a vector store and ask "who can host a Yoruba onboarding call?", and you get the best-written bio. In my sample data that's Tunde: "Yoruba native speaker and world-class community host. Hosted 100+ onboarding calls." His only record in the community is a no-show.</p>
+
+<h2>What I built</h2>
+<p>Vouch Graph stores who shipped what, with whom, and how it went. It answers with a <b>path</b>, not a similarity score:</p>
+<pre>You → Ngozi ("Weekly newcomer onboarding calls")
+    → Femi ("Yoruba translation of the Q4 roadmap")</pre>
+<p>When a hire happens, the outcome goes back into the graph, so the next answer is better.</p>
+
+<p>The graph is small and deliberate:</p>
+<pre>Person ──CLAIMS──▶ Skill            what their bio says
+Person ──SHIPPED──▶ Work ──NEEDED──▶ Skill   what they actually did (outcome: delivered / late / no-show)
+Person ──WORKED_WITH──▶ Person      who shipped together, with event_time</pre>
+
+<p>A question goes through three steps:</p>
+<ol>
+<li>SelfGraph's <code>retrieve()</code> seeds entities from the question and walks the current relations stored in HydraDB.</li>
+<li>Code scores each person from the returned subgraph: the skill fit of the work they shipped, times its outcome, plus a bonus for a trust path. That path is someone who shipped with you (one hop), or with someone who did (two hops).</li>
+<li>Every hire outcome is inserted as a new versioned fact, with its own <code>event_time</code>.</li>
+</ol>
+<p>Because nothing is deleted, <code>retrieve(..., as_of="2026-10-31")</code> replays what the graph would have answered before.</p>
+
+<h2>How HydraDB and SelfGraph helped</h2>
+<ul>
+<li><b>SelfGraph</b> gave me versioned facts for free. "Bisi delivered on 15 Nov" doesn't overwrite history. It becomes the newest version, and <code>as_of</code> can still see the October picture. For a hiring tool, that history is the receipt a lead needs when someone asks "why them?".</li>
+<li><b>Retrieval walks the graph, not embeddings.</b> SelfGraph seeds with BM25 and then traverses. That's exactly the behaviour I wanted: the answer comes from the links between people and work, not from how a bio is worded.</li>
+<li><b>The HydraDB engine</b> is the store. It runs locally from the official image and speaks Bolt, so SelfGraph's <code>HydraDBStore</code> works against it with no glue code. The same code also runs on SelfGraph's embedded store, which made iterating fast.</li>
+</ul>
+
+<h2>Does it get sharper? The numbers</h2>
+<p>Track 1 asks for an accuracy curve that rises over iterations, against a real baseline. I measured <b>hire success</b>: the share of tasks where the chosen person actually delivered.</p>
+<p>To keep it honest, the outcomes come from hidden true delivery rates that the method never sees. The baseline is profile search over self-written bios. I ran 5 simulated communities of 40 people, each with 10 rounds of 12 tasks. 35% of bios are inflated, and many good contributors have thin bios. Every round's outcomes go back into HydraDB.</p>
+<table>
+<tr><th></th><th>Hire success</th></tr>
+<tr><td>Vouch Graph, round 1 (cold start: only claims)</td><td>50%</td></tr>
+<tr><td>Vouch Graph, rounds 8–10</td><td><b>90%</b></td></tr>
+<tr><td>Profile search, all rounds</td><td>65%</td></tr>
+<tr><td>Oracle that knows the truth</td><td>95%</td></tr>
+</table>
+<p>Round 1 is worse than profile search, and I left it that way on purpose: with no history, claims are all the graph has. By round 3 it has overtaken the baseline, and by the end it's within five points of the oracle. The curve is on the <a href="https://0xkenichi.github.io/vouch-graph/">live page</a>, and <code>eval.py</code> reproduces it.</p>
+
+<h2>Technical challenges, and what I did</h2>
+<div class="box"><b>1. The hosted API needed a paid plan.</b> The HydraDB dashboard only offered paid tiers. The organisers confirmed the hackathon is about the open-source engine, so I switched to running <code>ghcr.io/hydra-db/hydradb</code> locally in Docker: a single local node, a plaintext dev token, and anonymous usage reporting turned off. Then I pointed SelfGraph's <code>HydraDBStore</code> at <code>bolt://127.0.0.1:7687</code>.</div>
+<div class="box"><b>2. Facts vanished when I time-travelled.</b> My first <code>as_of</code> run showed lower scores than the live run. The work-to-skill (<code>NEEDED</code>) edges had no <code>event_time</code>, so their effective time was the moment I inserted them, after the date I was asking about. SelfGraph was right and my data was wrong. Passing each work record's real date as <code>event_time</code> on the insert fixed it, and now <code>as_of</code> 31 Oct and the live run agree on everything that existed by then.</div>
+<div class="box"><b>3. Not every Cypher query is supported yet.</b> I tried to check the stored graph straight from the Neo4j driver. HydraDB rejected a <code>count()</code> query with "OpenCypher query is not supported yet". A plain <code>MATCH … RETURN … LIMIT</code> worked, which was enough to confirm every entity was in HydraDB under its own namespace.</div>
+<div class="box"><b>4. Keeping the baseline fair.</b> My first baseline scored higher than it should have, because I'd normalised by bio length, which quietly punished loud bios. A real vector store rewards keyword-rich bios. Once I made the baseline score plain matches, and gave many honest contributors thin bios like they have in real life, the comparison measured what I care about: whether delivered work beats self-description.</div>
+<div class="box"><b>5. Cold start.</b> With no history, the graph has to lean on claims. I score each person with a smoothed delivery rate: a claim is a weak prior that evidence overrides. Ties go to people with less history, so the graph keeps learning about new contributors instead of reusing the same three people.</div>
+
+<h2>Who it's for</h2>
+<p>DAO ops leads, grant programs and ambassador programs hire contributors every month. They already hold the data: payout lists, GitHub co-commits, event rosters and Discord roles. Vouch Graph turns that into contributor search with receipts, sold per community per month. The trust path is what makes a hiring decision defensible.</p>
+
+<p>Code: <a href="https://github.com/0xkenichi/vouch-graph">github.com/0xkenichi/vouch-graph</a> · Built on <a href="https://github.com/hydra-db/hydradb">HydraDB</a> and <a href="https://github.com/hydra-db/selfgraph">SelfGraph</a>.</p>
+</article>
+</body>
+</html>
