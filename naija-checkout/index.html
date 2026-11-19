@@ -27,7 +27,7 @@
     <button id="copy-buyer" class="add" type="button">Copy test wallet connection</button>
   </details>
   <ul id="products" class="products" aria-label="Products"></ul>
-  <p class="how">How this demo works: on a real site the checkout's server part runs on the developer's server and holds the shop's wallet connection. This free static page can't run a server, so that part runs in your browser against two throwaway test wallets made for your visit on <a href="https://faucet.nwc.dev">faucet.nwc.dev</a>. The payments are real Lightning messages; the balances are not real money.</p>
+  <p class="how">How this demo works: on a real site the checkout's server part runs on the developer's server and holds the shop's wallet connection. This free static page can't run a server, so that part runs in your browser against two throwaway test wallets made for your visit on <a href="https://faucet.nwc.dev">faucet.nwc.dev</a>. The wallet requests are real Nostr Wallet Connect messages, but the faucet settles payments between its own dummy wallets, so no real money moves.</p>
 </main>
 <footer class="cart" id="cart" hidden>
   <div class="cart-sum"><span id="cart-count">0 items</span><strong id="cart-total">₦0</strong></div>
