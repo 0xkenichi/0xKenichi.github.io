@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0f3d2e">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self' https://faucet.nwc.dev https://api.coingecko.com https://api.yadio.io wss:; base-uri 'none'; form-action 'self'">
+<meta name="referrer" content="no-referrer">
+<title>Naija Checkout · live demo</title>
+<link rel="stylesheet" href="shop.css">
+<link rel="stylesheet" href="naija-checkout.css">
+<script type="module" src="dist/hosted.js"></script>
+</head>
+<body>
+<div class="demo-bar" role="note">Live demo of <a href="https://github.com/0xkenichi/build-on-bitcoin-naija/tree/main/04-lightning-checkout">Naija Checkout</a>. Test sats only, nothing here is for sale. Don't pay with a real wallet.</div>
+<header class="top">
+  <div>
+    <h1 id="shop-name">Yaba Thrift Corner</h1>
+    <p class="tag">A made-up thrift shop. Pay in naira value with Bitcoin Lightning.</p>
+  </div>
+</header>
+<main>
+  <p id="setup" class="setup" role="status">Loading…</p>
+  <details id="buyer-wallet" class="buyer-wallet" hidden>
+    <summary>Want to try Nostr Wallet Connect?</summary>
+    <p>This visit's test customer wallet can pay over NWC. Copy its connection, then at checkout open “Pay with Nostr Wallet Connect” and paste it.</p>
+    <button id="copy-buyer" class="add" type="button">Copy test wallet connection</button>
+  </details>
+  <ul id="products" class="products" aria-label="Products"></ul>
+  <p class="how">How this demo works: on a real site the checkout's server part runs on the developer's server and holds the shop's wallet connection. This free static page can't run a server, so that part runs in your browser against two throwaway test wallets made for your visit on <a href="https://faucet.nwc.dev">faucet.nwc.dev</a>. The payments are real Lightning messages; the balances are not real money.</p>
+</main>
+<footer class="cart" id="cart" hidden>
+  <div class="cart-sum"><span id="cart-count">0 items</span><strong id="cart-total">₦0</strong></div>
+  <button id="pay" class="pay" type="button">Pay with ⚡ Lightning</button>
+</footer>
+<noscript><p class="noscript">This demo needs JavaScript.</p></noscript>
+</body>
+</html>
