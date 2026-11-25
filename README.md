@@ -1,25 +1,24 @@
 # Olanrewaju Animashaun (Kenichi)
-## Web3 Ecosystem Builder | DAO Governance Architect | Community & Developer Outreach
+## Operations Manager | Program Coordination | Builder
 
-Welcome to my professional portfolio. I specialize in decentralized governance, community building, and DAO infrastructure design with over 4+ years of experience in the Web3 space.
+I run operations for remote, distributed teams: contributor onboarding, documentation, payment tracking, reporting and community programs. When the tool a team needs doesn't exist, I build it.
 
-### 🌐 Live Portfolio
-Visit the interactive site at: **[0xkenichi.github.io](https://0xkenichi.github.io)**
+### 🌐 Live portfolio
+**[0xkenichi.github.io](https://0xkenichi.github.io)**: every role, build and result on one page, with links.
 
-### 🚀 Core Focus
-- **Ecosystem Growth**: Scaling beneficial AGI through SingularityNET and the ASI Alliance.
-- **DAO Governance**: Designing modular tooling and contributor frameworks (CurableLabs, Deep Funding).
-- **Reputation Systems**: Building Soulbound Token (SBT) based reputation and identity protocols.
+### 🚀 What I do
+- **Operations and programs:** SOPs, onboarding, payouts, KPI tracking and reporting. I designed the contribution and reward structure for SingularityNET's Ambassador Program (100+ contributors paid).
+- **Content:** 100+ published articles, plus video and podcast editing.
+- **Building:** UI/UX, full-stack apps and developer relations.
 
-### 🛠 Tech Stack
-- **Languages/Frameworks**: React, Node.js, Python, Rust.
-- **Web3**: ASI Chain, IPFS, Soulbound Tokens, Ethereum.
-- **Media**: Adobe Premiere Pro, After Effects, Riverside.
+### 🛠 Tools
+- **Code:** React, TypeScript, Node.js, Python, SQL, Rust.
+- **Design and media:** Figma, Premiere Pro, After Effects, Riverside, Descript.
 
-### 📫 Connect with Me
-- **X (Twitter)**: [@0xKenichi](https://x.com/0xKenichi)
-- **LinkedIn**: [finch-vestra](https://www.linkedin.com/in/finch-vestra/)
-- **Linktree**: [0xkenichi](https://linktr.ee/0xkenichi)
+### 📫 Contact
+- **X:** [@0xKenichi](https://x.com/0xKenichi)
+- **LinkedIn:** [finch-vestra](https://www.linkedin.com/in/finch-vestra/)
+- **Linktree:** [0xkenichi](https://linktr.ee/0xkenichi)
 
 ---
-*Built with ❤️ in Lagos, Nigeria.*
+*Built in Lagos, Nigeria.*
