@@ -1,0 +1,34 @@
+{
+ "source": "api.routescan.io Etherscan-compatible logs API (independent indexer, no key)",
+ "blocks": [
+  25806959,
+  26452577
+ ],
+ "indexer": {
+  "mint_events": 409,
+  "reth_minted": 3872.890887097072,
+  "eth_net": 4549.241930440514,
+  "deposit_received_events": 364,
+  "eth_deposited_gross": 3911.5176892851564,
+  "credit_withdrawn_events": 45,
+  "credit_withdrawn_eth": 640.0
+ },
+ "rpc_pipeline": {
+  "mint_events": 409,
+  "reth_minted": 3872.890887097072,
+  "eth_net": 4549.241930440514,
+  "deposit_received_events": 364,
+  "eth_deposited_gross": 3911.5176892851564,
+  "credit_withdrawn_events": 45,
+  "credit_withdrawn_eth": 640.0
+ },
+ "gap_rpc_minus_indexer": {
+  "mint_events": 0,
+  "reth_minted": 0.0,
+  "eth_net": 0.0,
+  "deposit_received_events": 0,
+  "eth_deposited_gross": 0.0,
+  "credit_withdrawn_events": 0,
+  "credit_withdrawn_eth": 0.0
+ }
+}

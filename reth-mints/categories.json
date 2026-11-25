@@ -1,0 +1,7 @@
+{
+ "0x9008d19f58aabd9ed0d60971565aa8510560ab41": {"category": "DEX aggregator / router", "note": "CoW Protocol settlement; tag on Etherscan"},
+ "0x6131b5fae19ea4f9d964eac0408e4408b66337b5": {"category": "DEX aggregator / router", "note": "KyberSwap aggregator router; tag on Etherscan"},
+ "0x5ff137d4b0fdcd49dca30c7cf57e578a026d2789": {"category": "Smart wallet (Safe / ERC-4337 / EIP-7702)", "note": "ERC-4337 EntryPoint v0.6; tag on Etherscan"},
+ "0x0000000071727de22e5e9d8baf0edac6f37da032": {"category": "Smart wallet (Safe / ERC-4337 / EIP-7702)", "note": "ERC-4337 EntryPoint v0.7; tag on Etherscan"},
+ "0x1f6692e78dde07ff8da75769b6d7c716215bc7d0": {"category": "Wallet staking feature (MetaMask)", "note": "Etherscan tag 'MetaMask: Third Party Staking'"}
+}

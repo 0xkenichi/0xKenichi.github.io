@@ -1,0 +1,61 @@
+{
+ "window": {
+  "start_date": "2026-08-22",
+  "end_date_exclusive": "2026-11-20",
+  "start_block": 25806959,
+  "end_block": 26452577
+ },
+ "rocket_storage": "0x1d8f8f00cfa6758d7be78336684788fb0ee0fa46",
+ "rocketTokenRETH": "0xae78736cd615f374d3085123a210448e74fc6393",
+ "rETH_matches_expected": true,
+ "rocketDepositPool_now": "0xce15294273cfb9d9b628f4d61636623decdf4fdc",
+ "rocketDepositPool_at_start_block": "0xce15294273cfb9d9b628f4d61636623decdf4fdc",
+ "rocketDepositPool_at_end_block": "0xce15294273cfb9d9b628f4d61636623decdf4fdc",
+ "deposit_received_emitters": {
+  "0xce15294273cfb9d9b628f4d61636623decdf4fdc": {
+   "rocketstorage_name_at_start": "rocketDepositPool",
+   "rocketstorage_exists_at_start": true,
+   "rocketstorage_exists_now": true,
+   "n_events": 364
+  }
+ },
+ "pools": {
+  "0x553e9c493678d8606d6a5ba284643db2110df823": {
+   "dex": "Uniswap v3",
+   "fee_bps": 1.0,
+   "token0": "0xae78736cd615f374d3085123a210448e74fc6393",
+   "source": "UniswapV3Factory.getPool(rETH, WETH, 100)"
+  },
+  "0xa4e0faa58465a2d369aa21b3e42d43374c6f9613": {
+   "dex": "Uniswap v3",
+   "fee_bps": 5.0,
+   "token0": "0xae78736cd615f374d3085123a210448e74fc6393",
+   "source": "UniswapV3Factory.getPool(rETH, WETH, 500)"
+  },
+  "0xf0e02cf61b31260fd5ae527d58be16312bda59b1": {
+   "dex": "Uniswap v3",
+   "fee_bps": 30.0,
+   "token0": "0xae78736cd615f374d3085123a210448e74fc6393",
+   "source": "UniswapV3Factory.getPool(rETH, WETH, 3000)"
+  },
+  "0xe4f719c11fc5ab883e32068df99962985645e860": {
+   "dex": "Uniswap v2",
+   "token0": "0xae78736cd615f374d3085123a210448e74fc6393",
+   "source": "UniswapV2Factory.getPair(rETH, WETH)"
+  }
+ },
+ "balancer_v2_vault": "0xba12222222228d8ba445958a75a0704d566bf2c8",
+ "reth_total_supply_at_block_before_start": "320042274964317054859066",
+ "reth_total_supply_at_end_block": "303013831412914129980732",
+ "topics": {
+  "CreditWithdrawn": "0x77982616940619ddbda4afe3675280fff7c605d31503336add3633fbea69d8ba",
+  "TokensMinted": "0x6155cfd0fd028b0ca77e8495a60cbe563e8bce8611f0aad6fedbdaafc05d44a2",
+  "TokensBurned": "0x19783b34589160c168487dc7f9c51ae0bcefe67a47d6708fba90f6ce0366d3d1",
+  "DepositReceived": "0x7aa1a8eb998c779420645fc14513bf058edb347d95c2fc2e6845bdc22f888631"
+ },
+ "rpc_stats": {
+  "requests": 150,
+  "retries": 2
+ },
+ "fetched_at_utc": "2026-11-20T21:15:42.622873Z"
+}

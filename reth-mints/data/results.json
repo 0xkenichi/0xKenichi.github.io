@@ -1,0 +1,667 @@
+{
+ "window": {
+  "start_date": "2026-08-22",
+  "end_date_exclusive": "2026-11-20",
+  "start_block": 25806959,
+  "end_block": 26452577
+ },
+ "totals": {
+  "mints": 409,
+  "mint_txs": 409,
+  "reth_minted": 3872.890887097075,
+  "eth_net": 4549.24193044051,
+  "eth_gross_all": 4551.517689285158,
+  "deposit_mints": 364,
+  "eth_deposited_new": 3911.517689285158,
+  "credit_mints": 45,
+  "eth_credit_withdrawn": 640.0,
+  "unmatched": 0,
+  "deposit_fee_eth": 2.2757588446474983,
+  "unique_depositors": 283,
+  "unique_tx_senders": 312
+ },
+ "by_category": {
+  "Direct deposit (EOA -> deposit pool)": {
+   "mints": 311,
+   "eth_gross": 3208.6482692697464,
+   "reth": 2729.685952544408,
+   "share_eth": 0.7049622759510099,
+   "share_count": 0.7603911980440098
+  },
+  "Node operator credit withdrawal (no new ETH)": {
+   "mints": 45,
+   "eth_gross": 640.0,
+   "reth": 545.2042530787169,
+   "share_eth": 0.1406124382437621,
+   "share_count": 0.1100244498777506
+  },
+  "Rocket Pool swap router": {
+   "mints": 1,
+   "eth_gross": 32.00705114434224,
+   "reth": 27.21632565893883,
+   "share_eth": 0.00703217109749806,
+   "share_count": 0.0024449877750611247
+  },
+  "DEX aggregator / router": {
+   "mints": 5,
+   "eth_gross": 343.8427591698883,
+   "reth": 292.37503651123745,
+   "share_eth": 0.07554463865521982,
+   "share_count": 0.012224938875305624
+  },
+  "Smart wallet (Safe / ERC-4337 / EIP-7702)": {
+   "mints": 10,
+   "eth_gross": 205.14463698725325,
+   "reth": 174.68488056133762,
+   "share_eth": 0.04507169937407678,
+   "share_count": 0.02444987775061125
+  },
+  "Wallet staking feature (MetaMask)": {
+   "mints": 14,
+   "eth_gross": 37.86639468702616,
+   "reth": 32.25070686190795,
+   "share_eth": 0.008319509506942793,
+   "share_count": 0.034229828850855744
+  },
+  "Vault or other protocol": {
+   "mints": 0,
+   "eth_gross": 0,
+   "reth": 0,
+   "share_eth": 0.0,
+   "share_count": 0.0
+  },
+  "Unlabelled contract": {
+   "mints": 23,
+   "eth_gross": 84.00857802690022,
+   "reth": 71.47373188052478,
+   "share_eth": 0.018457267171490276,
+   "share_count": 0.05623471882640587
+  }
+ },
+ "entry_points": [
+  {
+   "address": "0x9008d19f58aabd9ed0d60971565aa8510560ab41",
+   "mints": 4,
+   "eth": 338.43991889938445,
+   "label": "CoW Protocol: GPv2Settlement",
+   "label_source": "Etherscan name tag (etherscan.io/address/0x9008d19f58aabd9ed0d60971565aa8510560ab41)",
+   "category": "DEX aggregator / router",
+   "safe": false,
+   "safe_version": "",
+   "code_kind": "contract",
+   "note": "CoW Protocol settlement; tag on Etherscan"
+  },
+  {
+   "address": "0x9953f65e00ce71d7aa5a3f7889f63fee0f1ba63c",
+   "mints": 4,
+   "eth": 178.45999999999998,
+   "label": "SafeProxy",
+   "label_source": "Blockscout verified contract name (eth.blockscout.com/address/0x9953f65e00ce71d7aa5a3f7889f63fee0f1ba63c)",
+   "category": "Smart wallet (Safe / ERC-4337 / EIP-7702)",
+   "safe": true,
+   "safe_version": "1.4.1",
+   "code_kind": "contract",
+   "note": ""
+  },
+  {
+   "address": "0x8f5835e9d756c9bd934bce527157a4b0ef3c5cb7",
+   "mints": 16,
+   "eth": 79.47650234271887,
+   "label": "unlabelled contract",
+   "label_source": "",
+   "category": "Unlabelled contract",
+   "safe": false,
+   "safe_version": "",
+   "code_kind": "contract",
+   "note": ""
+  },
+  {
+   "address": "0x1f6692e78dde07ff8da75769b6d7c716215bc7d0",
+   "mints": 14,
+   "eth": 37.86639468702616,
+   "label": "MetaMask: Third Party Staking",
+   "label_source": "Etherscan name tag (etherscan.io/address/0x1f6692e78dde07ff8da75769b6d7c716215bc7d0)",
+   "category": "Wallet staking feature (MetaMask)",
+   "safe": false,
+   "safe_version": "",
+   "code_kind": "contract",
+   "note": "Etherscan tag 'MetaMask: Third Party Staking'"
+  },
+  {
+   "address": "0x16d5a408e807db8ef7c578279beeee6b228f1c1c",
+   "mints": 1,
+   "eth": 32.00705114434224,
+   "label": "Rocket Pool: Swap Router",
+   "label_source": "Etherscan name tag (etherscan.io/address/0x16d5a408e807db8ef7c578279beeee6b228f1c1c)",
+   "category": "Rocket Pool swap router",
+   "safe": false,
+   "safe_version": "",
+   "code_kind": "contract",
+   "note": ""
+  },
+  {
+   "address": "0x5ff137d4b0fdcd49dca30c7cf57e578a026d2789",
+   "mints": 2,
+   "eth": 16.0,
+   "label": "Entry Point 0.6.0",
+   "label_source": "Etherscan name tag (etherscan.io/address/0x5ff137d4b0fdcd49dca30c7cf57e578a026d2789)",
+   "category": "Smart wallet (Safe / ERC-4337 / EIP-7702)",
+   "safe": false,
+   "safe_version": "",
+   "code_kind": "contract",
+   "note": "ERC-4337 EntryPoint v0.6; tag on Etherscan"
+  },
+  {
+   "address": "0xfd314504b868c716ce409c7eb999d4b7e240e96e",
+   "mints": 1,
+   "eth": 6.274187737146005,
+   "label": "Safe v1.5.0 (threshold 1)",
+   "label_source": "on-chain: getThreshold() and VERSION() answer at this address",
+   "category": "Smart wallet (Safe / ERC-4337 / EIP-7702)",
+   "safe": true,
+   "safe_version": "1.5.0",
+   "code_kind": "contract",
+   "note": ""
+  },
+  {
+   "address": "0x6131b5fae19ea4f9d964eac0408e4408b66337b5",
+   "mints": 1,
+   "eth": 5.402840270503902,
+   "label": "KyberSwap: Meta Aggregation Router v2",
+   "label_source": "Etherscan name tag (etherscan.io/address/0x6131b5fae19ea4f9d964eac0408e4408b66337b5)",
+   "category": "DEX aggregator / router",
+   "safe": false,
+   "safe_version": "",
+   "code_kind": "contract",
+   "note": "KyberSwap aggregator router; tag on Etherscan"
+  },
+  {
+   "address": "0xff0000000674ffb069f73038b0a54c7937552088",
+   "mints": 5,
+   "eth": 4.51080807,
+   "label": "unlabelled contract",
+   "label_source": "",
+   "category": "Unlabelled contract",
+   "safe": false,
+   "safe_version": "",
+   "code_kind": "contract",
+   "note": ""
+  },
+  {
+   "address": "0x20dc966e61e77fce62e271d5357b32476ef8f3fd",
+   "mints": 1,
+   "eth": 4.307189760107245,
+   "label": "GnosisSafeProxy",
+   "label_source": "Blockscout verified contract name (eth.blockscout.com/address/0x20dc966e61e77fce62e271d5357b32476ef8f3fd)",
+   "category": "Smart wallet (Safe / ERC-4337 / EIP-7702)",
+   "safe": true,
+   "safe_version": "1.3.0",
+   "code_kind": "contract",
+   "note": ""
+  },
+  {
+   "address": "0x0000000071727de22e5e9d8baf0edac6f37da032",
+   "mints": 1,
+   "eth": 0.08,
+   "label": "Entry Point 0.7.0",
+   "label_source": "Etherscan name tag (etherscan.io/address/0x0000000071727de22e5e9d8baf0edac6f37da032)",
+   "category": "Smart wallet (Safe / ERC-4337 / EIP-7702)",
+   "safe": false,
+   "safe_version": "",
+   "code_kind": "contract",
+   "note": "ERC-4337 EntryPoint v0.7; tag on Etherscan"
+  },
+  {
+   "address": "0xd0a9a5f6b129e8ce82943025e20c1ae0e6f016e1",
+   "mints": 1,
+   "eth": 0.02325949,
+   "label": "Safe v1.3.0 (threshold 1)",
+   "label_source": "on-chain: getThreshold() and VERSION() answer at this address",
+   "category": "Smart wallet (Safe / ERC-4337 / EIP-7702)",
+   "safe": true,
+   "safe_version": "1.3.0",
+   "code_kind": "contract",
+   "note": ""
+  },
+  {
+   "address": "0xbc1d9760bd6ca468ca9fb5ff2cfbeac35d86c973",
+   "mints": 1,
+   "eth": 0.01126761418132896,
+   "label": "unlabelled contract",
+   "label_source": "",
+   "category": "Unlabelled contract",
+   "safe": false,
+   "safe_version": "",
+   "code_kind": "contract",
+   "note": ""
+  },
+  {
+   "address": "0x2fd983c453753eeae26079553bc1032a863a2186",
+   "mints": 1,
+   "eth": 0.01,
+   "label": "unlabelled contract",
+   "label_source": "",
+   "category": "Unlabelled contract",
+   "safe": false,
+   "safe_version": "",
+   "code_kind": "contract",
+   "note": ""
+  }
+ ],
+ "top10": [
+  {
+   "address": "0x6ea486a3426563e23023125f18867117878f0ea7",
+   "mints": 3,
+   "eth": 1125.0,
+   "share": 0.24717030160036305,
+   "kind": "EOA+7702->0x63c0c19a282a1b52b07dd5a65b58948a07dae32b",
+   "label": "EOA, EIP-7702 delegated to 0x63c0c19a\u2026 (MetaMask: EIP-7702 Delegator)",
+   "label_source": "on-chain eth_getCode (0xef0100 prefix); delegate label: Etherscan name tag (etherscan.io/address/0x63c0c19a282a1b52b07dd5a65b58948a07dae32b)",
+   "path": "Direct deposit (EOA -> deposit pool)"
+  },
+  {
+   "address": "0xccede65d51037f557afe45e6fc5bbfcaf4fd9998",
+   "mints": 1,
+   "eth": 700.0,
+   "share": 0.1537948543291148,
+   "kind": "EOA",
+   "label": "EOA (no public tag)",
+   "label_source": "on-chain eth_getCode is empty",
+   "path": "Direct deposit (EOA -> deposit pool)"
+  },
+  {
+   "address": "0xaddc26a3854feabfd20d6bf658254088d83a425a",
+   "mints": 3,
+   "eth": 327.837302486147,
+   "share": 0.07202812882786702,
+   "kind": "contract",
+   "label": "MainnetSettler",
+   "label_source": "Blockscout verified contract name (eth.blockscout.com/address/0xaddc26a3854feabfd20d6bf658254088d83a425a)",
+   "path": "DEX aggregator / router"
+  },
+  {
+   "address": "0xce8d037748fa151a1ca6d18138066ce61d1022a6",
+   "mints": 1,
+   "eth": 271.0,
+   "share": 0.05954057931884301,
+   "kind": "EOA",
+   "label": "EOA (no public tag)",
+   "label_source": "on-chain eth_getCode is empty",
+   "path": "Direct deposit (EOA -> deposit pool)"
+  },
+  {
+   "address": "0x4938412d8cac27cf2a9e1a900c881cc437e4bbed",
+   "mints": 7,
+   "eth": 224.0,
+   "share": 0.04921435338531673,
+   "kind": "EOA",
+   "label": "EOA (no public tag)",
+   "label_source": "on-chain eth_getCode is empty",
+   "path": "Node operator credit withdrawal (no new ETH)"
+  },
+  {
+   "address": "0xde53bcda6527d2aa15ec733352c8d393c2e0ec99",
+   "mints": 4,
+   "eth": 178.45999999999998,
+   "share": 0.039208899576534034,
+   "kind": "contract",
+   "label": "SafeProxy",
+   "label_source": "Blockscout verified contract name (eth.blockscout.com/address/0xde53bcda6527d2aa15ec733352c8d393c2e0ec99)",
+   "path": "Smart wallet (Safe / ERC-4337 / EIP-7702)"
+  },
+  {
+   "address": "0x0e59e76bc1ce90fb8fdb857a0efc9122546f15b7",
+   "mints": 1,
+   "eth": 100.0,
+   "share": 0.02197069347558783,
+   "kind": "EOA",
+   "label": "EOA (no public tag)",
+   "label_source": "on-chain eth_getCode is empty",
+   "path": "Direct deposit (EOA -> deposit pool)"
+  },
+  {
+   "address": "0x0f61d61ffdf741a87d506c55c2c5bd3f76d3b2b5",
+   "mints": 1,
+   "eth": 100.0,
+   "share": 0.02197069347558783,
+   "kind": "EOA",
+   "label": "EOA (no public tag)",
+   "label_source": "on-chain eth_getCode is empty",
+   "path": "Direct deposit (EOA -> deposit pool)"
+  },
+  {
+   "address": "0x6996e087b7b138d9f655f663b7e3f2dc95b532ea",
+   "mints": 1,
+   "eth": 100.0,
+   "share": 0.02197069347558783,
+   "kind": "EOA",
+   "label": "EOA (no public tag)",
+   "label_source": "on-chain eth_getCode is empty",
+   "path": "Direct deposit (EOA -> deposit pool)"
+  },
+  {
+   "address": "0xa31b59c9a7ecacd682da37898716681ce02cb188",
+   "mints": 2,
+   "eth": 80.0,
+   "share": 0.017576554780470263,
+   "kind": "EOA",
+   "label": "EOA (no public tag)",
+   "label_source": "on-chain eth_getCode is empty",
+   "path": "Node operator credit withdrawal (no new ETH)"
+  }
+ ],
+ "top10_share": 0.7044457522452724,
+ "weekly": [
+  {
+   "week": "22 Aug\u201328 Aug",
+   "Direct deposit (EOA -> deposit pool)": 62.42987361295827,
+   "Node operator credit withdrawal (no new ETH)": 60.0,
+   "Rocket Pool swap router": 0.0,
+   "DEX aggregator / router": 0.0,
+   "Smart wallet (Safe / ERC-4337 / EIP-7702)": 0.0,
+   "Wallet staking feature (MetaMask)": 0.3201244227290291,
+   "Vault or other protocol": 0.0,
+   "Unlabelled contract": 0.01,
+   "mints": 44,
+   "dex_reth": 1795.491436342517,
+   "mint_reth": 104.84158395158019,
+   "burn_reth": 416.9596154808493
+  },
+  {
+   "week": "29 Aug\u201304 Sep",
+   "Direct deposit (EOA -> deposit pool)": 34.169063326714785,
+   "Node operator credit withdrawal (no new ETH)": 48.0,
+   "Rocket Pool swap router": 0.0,
+   "DEX aggregator / router": 0.0,
+   "Smart wallet (Safe / ERC-4337 / EIP-7702)": 0.02325949,
+   "Wallet staking feature (MetaMask)": 0.0,
+   "Vault or other protocol": 0.0,
+   "Unlabelled contract": 0.01,
+   "mints": 34,
+   "dex_reth": 5219.759060599003,
+   "mint_reth": 70.17949968730926,
+   "burn_reth": 2497.2205489976127
+  },
+  {
+   "week": "05 Sep\u201311 Sep",
+   "Direct deposit (EOA -> deposit pool)": 127.83858275431835,
+   "Node operator credit withdrawal (no new ETH)": 12.0,
+   "Rocket Pool swap router": 0.0,
+   "DEX aggregator / router": 0.0,
+   "Smart wallet (Safe / ERC-4337 / EIP-7702)": 0.0,
+   "Wallet staking feature (MetaMask)": 3.7,
+   "Vault or other protocol": 0.0,
+   "Unlabelled contract": 0.0,
+   "mints": 29,
+   "dex_reth": 1563.1073569578969,
+   "mint_reth": 122.48804833364763,
+   "burn_reth": 457.3171626500869
+  },
+  {
+   "week": "12 Sep\u201318 Sep",
+   "Direct deposit (EOA -> deposit pool)": 60.83804939099504,
+   "Node operator credit withdrawal (no new ETH)": 88.0,
+   "Rocket Pool swap router": 0.0,
+   "DEX aggregator / router": 0.0,
+   "Smart wallet (Safe / ERC-4337 / EIP-7702)": 0.0,
+   "Wallet staking feature (MetaMask)": 0.0,
+   "Vault or other protocol": 0.0,
+   "Unlabelled contract": 0.0,
+   "mints": 24,
+   "dex_reth": 1120.4737080791408,
+   "mint_reth": 126.93990014295633,
+   "burn_reth": 459.5288365398978
+  },
+  {
+   "week": "19 Sep\u201325 Sep",
+   "Direct deposit (EOA -> deposit pool)": 51.337246972893176,
+   "Node operator credit withdrawal (no new ETH)": 0.0,
+   "Rocket Pool swap router": 0.0,
+   "DEX aggregator / router": 0.0,
+   "Smart wallet (Safe / ERC-4337 / EIP-7702)": 0.0,
+   "Wallet staking feature (MetaMask)": 0.59,
+   "Vault or other protocol": 0.0,
+   "Unlabelled contract": 0.01,
+   "mints": 21,
+   "dex_reth": 1820.697059949574,
+   "mint_reth": 44.28040581217414,
+   "burn_reth": 444.7137855090238
+  },
+  {
+   "week": "26 Sep\u201302 Oct",
+   "Direct deposit (EOA -> deposit pool)": 145.50130018785217,
+   "Node operator credit withdrawal (no new ETH)": 44.0,
+   "Rocket Pool swap router": 0.0,
+   "DEX aggregator / router": 0.0,
+   "Smart wallet (Safe / ERC-4337 / EIP-7702)": 6.274187737146005,
+   "Wallet staking feature (MetaMask)": 0.22,
+   "Vault or other protocol": 0.0,
+   "Unlabelled contract": 0.1734247233873591,
+   "mints": 28,
+   "dex_reth": 1692.7182223039783,
+   "mint_reth": 167.19529621506413,
+   "burn_reth": 438.0712666703776
+  },
+  {
+   "week": "03 Oct\u201309 Oct",
+   "Direct deposit (EOA -> deposit pool)": 28.16590046886673,
+   "Node operator credit withdrawal (no new ETH)": 24.0,
+   "Rocket Pool swap router": 0.0,
+   "DEX aggregator / router": 0.0,
+   "Smart wallet (Safe / ERC-4337 / EIP-7702)": 72.1,
+   "Wallet staking feature (MetaMask)": 0.30300000000000005,
+   "Vault or other protocol": 0.0,
+   "Unlabelled contract": 0.0,
+   "mints": 22,
+   "dex_reth": 1943.3048588327251,
+   "mint_reth": 106.11518834883361,
+   "burn_reth": 917.51021689651
+  },
+  {
+   "week": "10 Oct\u201316 Oct",
+   "Direct deposit (EOA -> deposit pool)": 24.484876344183274,
+   "Node operator credit withdrawal (no new ETH)": 8.0,
+   "Rocket Pool swap router": 0.0,
+   "DEX aggregator / router": 0.0,
+   "Smart wallet (Safe / ERC-4337 / EIP-7702)": 98.30718976010725,
+   "Wallet staking feature (MetaMask)": 31.3,
+   "Vault or other protocol": 0.0,
+   "Unlabelled contract": 0.0,
+   "mints": 15,
+   "dex_reth": 2555.3109702563024,
+   "mint_reth": 138.0307939541035,
+   "burn_reth": 775.4568526523568
+  },
+  {
+   "week": "17 Oct\u201323 Oct",
+   "Direct deposit (EOA -> deposit pool)": 409.0679497287085,
+   "Node operator credit withdrawal (no new ETH)": 0.0,
+   "Rocket Pool swap router": 0.0,
+   "DEX aggregator / router": 16.005456683741325,
+   "Smart wallet (Safe / ERC-4337 / EIP-7702)": 5.88,
+   "Wallet staking feature (MetaMask)": 0.848,
+   "Vault or other protocol": 0.0,
+   "Unlabelled contract": 33.041583597281544,
+   "mints": 28,
+   "dex_reth": 1690.2091462937465,
+   "mint_reth": 395.6688796035833,
+   "burn_reth": 5474.8196657921635
+  },
+  {
+   "week": "24 Oct\u201330 Oct",
+   "Direct deposit (EOA -> deposit pool)": 16.160983045976465,
+   "Node operator credit withdrawal (no new ETH)": 308.0,
+   "Rocket Pool swap router": 0.0,
+   "DEX aggregator / router": 0.0,
+   "Smart wallet (Safe / ERC-4337 / EIP-7702)": 0.08,
+   "Wallet staking feature (MetaMask)": 0.375758043667491,
+   "Vault or other protocol": 0.0,
+   "Unlabelled contract": 9.865005758206056,
+   "mints": 37,
+   "dex_reth": 603.9873622286395,
+   "mint_reth": 284.6541762840927,
+   "burn_reth": 1716.0135734839405
+  },
+  {
+   "week": "31 Oct\u201306 Nov",
+   "Direct deposit (EOA -> deposit pool)": 143.1939403035701,
+   "Node operator credit withdrawal (no new ETH)": 16.0,
+   "Rocket Pool swap router": 0.0,
+   "DEX aggregator / router": 47.08754605608703,
+   "Smart wallet (Safe / ERC-4337 / EIP-7702)": 0.0,
+   "Wallet staking feature (MetaMask)": 0.20951222062963307,
+   "Vault or other protocol": 0.0,
+   "Unlabelled contract": 6.932821389889913,
+   "mints": 49,
+   "dex_reth": 246.34337725144303,
+   "mint_reth": 181.5242610632015,
+   "burn_reth": 843.5129554719698
+  },
+  {
+   "week": "07 Nov\u201313 Nov",
+   "Direct deposit (EOA -> deposit pool)": 821.6519907635128,
+   "Node operator credit withdrawal (no new ETH)": 8.0,
+   "Rocket Pool swap router": 32.00705114434224,
+   "DEX aggregator / router": 133.434369318636,
+   "Smart wallet (Safe / ERC-4337 / EIP-7702)": 16.0,
+   "Wallet staking feature (MetaMask)": 0.0,
+   "Vault or other protocol": 0.0,
+   "Unlabelled contract": 33.7702287598625,
+   "mints": 38,
+   "dex_reth": 485.1143400606542,
+   "mint_reth": 888.4444758617053,
+   "burn_reth": 2490.5838659899837
+  },
+  {
+   "week": "14 Nov\u201319 Nov",
+   "Direct deposit (EOA -> deposit pool)": 1283.8085123691965,
+   "Node operator credit withdrawal (no new ETH)": 24.0,
+   "Rocket Pool swap router": 0.0,
+   "DEX aggregator / router": 147.315387111424,
+   "Smart wallet (Safe / ERC-4337 / EIP-7702)": 6.48,
+   "Wallet staking feature (MetaMask)": 0.0,
+   "Vault or other protocol": 0.0,
+   "Unlabelled contract": 0.19551379827283843,
+   "mints": 40,
+   "dex_reth": 1794.6633481414958,
+   "mint_reth": 1242.5283778388207,
+   "burn_reth": 3969.6260923652267
+  }
+ ],
+ "dex_venues": {
+  "Uniswap v4 PoolManager (rETH Transfer out, approx.)": {
+   "swaps": 5910,
+   "reth": 7692.830407036609
+  },
+  "Uniswap v3 rETH/WETH 0.01%": {
+   "swaps": 13193,
+   "reth": 10170.091949672418
+  },
+  "Uniswap v3 rETH/WETH 0.05%": {
+   "swaps": 619,
+   "reth": 460.1871193389934
+  },
+  "Balancer v2 (all pools, tokenOut=rETH)": {
+   "swaps": 361,
+   "reth": 1.6258661908771959
+  },
+  "Balancer v3 Vault (rETH Transfer out, approx.)": {
+   "swaps": 964,
+   "reth": 4206.353885664225
+  },
+  "Uniswap v3 rETH/WETH 0.30%": {
+   "swaps": 15,
+   "reth": 0.08927088628261588
+  },
+  "Uniswap v2 rETH/WETH": {
+   "swaps": 5,
+   "reth": 0.0017485077273529958
+  }
+ },
+ "dex_totals": {
+  "swaps": 21067,
+  "txs": 20015,
+  "reth": 22531.18024729713,
+  "swaps_in_mint_txs": 11,
+  "txs_with_multiple_reth_out_swaps": 727
+ },
+ "supply_check": {
+  "before": 320042.2749643171,
+  "end": 303013.83141291415,
+  "burned": 20901.3344385,
+  "burn_events": 16998,
+  "delta": -17028.443551402946,
+  "minted_minus_burned": -17028.443551402925,
+  "gap": -2.1827872842550278e-11
+ },
+ "crosscheck": {
+  "source": "api.routescan.io Etherscan-compatible logs API (independent indexer, no key)",
+  "blocks": [
+   25806959,
+   26452577
+  ],
+  "indexer": {
+   "mint_events": 409,
+   "reth_minted": 3872.890887097072,
+   "eth_net": 4549.241930440514,
+   "deposit_received_events": 364,
+   "eth_deposited_gross": 3911.5176892851564,
+   "credit_withdrawn_events": 45,
+   "credit_withdrawn_eth": 640.0
+  },
+  "rpc_pipeline": {
+   "mint_events": 409,
+   "reth_minted": 3872.890887097072,
+   "eth_net": 4549.241930440514,
+   "deposit_received_events": 364,
+   "eth_deposited_gross": 3911.5176892851564,
+   "credit_withdrawn_events": 45,
+   "credit_withdrawn_eth": 640.0
+  },
+  "gap_rpc_minus_indexer": {
+   "mint_events": 0,
+   "reth_minted": 0.0,
+   "eth_net": 0.0,
+   "deposit_received_events": 0,
+   "eth_deposited_gross": 0.0,
+   "credit_withdrawn_events": 0,
+   "credit_withdrawn_eth": 0.0
+  }
+ },
+ "categories": [
+  "Direct deposit (EOA -> deposit pool)",
+  "Node operator credit withdrawal (no new ETH)",
+  "Rocket Pool swap router",
+  "DEX aggregator / router",
+  "Smart wallet (Safe / ERC-4337 / EIP-7702)",
+  "Wallet staking feature (MetaMask)",
+  "Vault or other protocol",
+  "Unlabelled contract"
+ ],
+ "pools": {
+  "0x553e9c493678d8606d6a5ba284643db2110df823": {
+   "dex": "Uniswap v3",
+   "fee_bps": 1.0,
+   "token0": "0xae78736cd615f374d3085123a210448e74fc6393",
+   "source": "UniswapV3Factory.getPool(rETH, WETH, 100)"
+  },
+  "0xa4e0faa58465a2d369aa21b3e42d43374c6f9613": {
+   "dex": "Uniswap v3",
+   "fee_bps": 5.0,
+   "token0": "0xae78736cd615f374d3085123a210448e74fc6393",
+   "source": "UniswapV3Factory.getPool(rETH, WETH, 500)"
+  },
+  "0xf0e02cf61b31260fd5ae527d58be16312bda59b1": {
+   "dex": "Uniswap v3",
+   "fee_bps": 30.0,
+   "token0": "0xae78736cd615f374d3085123a210448e74fc6393",
+   "source": "UniswapV3Factory.getPool(rETH, WETH, 3000)"
+  },
+  "0xe4f719c11fc5ab883e32068df99962985645e860": {
+   "dex": "Uniswap v2",
+   "token0": "0xae78736cd615f374d3085123a210448e74fc6393",
+   "source": "UniswapV2Factory.getPair(rETH, WETH)"
+  }
+ },
+ "balancer_v2_vault": "0xba12222222228d8ba445958a75a0704d566bf2c8"
+}
