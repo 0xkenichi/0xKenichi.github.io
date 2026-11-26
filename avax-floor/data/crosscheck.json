@@ -1,0 +1,122 @@
+{
+ "burn_AVAX_routescan_vs_avax_metrics_api": {
+  "days": 111,
+  "first": "2026-08-01",
+  "last": "2026-11-19",
+  "sum_a": 117496.11,
+  "sum_b": 117509.15,
+  "total_gap_pct": -0.011,
+  "median_abs_daily_gap_pct": 0.16,
+  "max_abs_daily_gap_pct": 0.814
+ },
+ "burn_USD_routescan_x_price_vs_defillama_chain_fees": {
+  "days": 117,
+  "first": "2026-08-01",
+  "last": "2026-11-25",
+  "sum_a": 1121281.75,
+  "sum_b": 1116191,
+  "total_gap_pct": 0.456,
+  "median_abs_daily_gap_pct": 1.693,
+  "max_abs_daily_gap_pct": 59.201
+ },
+ "burn_AVAX_routescan_vs_defillama_usd_div_price": {
+  "days": 117,
+  "first": "2026-08-01",
+  "last": "2026-11-25",
+  "sum_a": 127106.07,
+  "sum_b": 126455.1,
+  "total_gap_pct": 0.515,
+  "median_abs_daily_gap_pct": 1.693,
+  "max_abs_daily_gap_pct": 59.201
+ },
+ "defillama_fees_vs_defillama_revenue_burned": {
+  "days": 117,
+  "first": "2026-08-01",
+  "last": "2026-11-25",
+  "sum_a": 1116191,
+  "sum_b": 1116191,
+  "total_gap_pct": 0.0,
+  "median_abs_daily_gap_pct": 0.0,
+  "max_abs_daily_gap_pct": 0.0
+ },
+ "tx_routescan_vs_avax_metrics_api": {
+  "days": 111,
+  "first": "2026-08-01",
+  "last": "2026-11-19",
+  "sum_a": 115685896,
+  "sum_b": 115700387,
+  "total_gap_pct": -0.013,
+  "median_abs_daily_gap_pct": 0.165,
+  "max_abs_daily_gap_pct": 0.719
+ },
+ "price_defillama_noon_vs_coingecko_daily": {
+  "days": 117,
+  "first": "2026-08-01",
+  "last": "2026-11-25",
+  "sum_a": 977.84,
+  "sum_b": 975.83,
+  "total_gap_pct": 0.207,
+  "median_abs_daily_gap_pct": 1.35,
+  "max_abs_daily_gap_pct": 13.596
+ },
+ "burn_USD_routescan_vs_defillama__pre_aug": {
+  "days": 31,
+  "first": "2026-08-01",
+  "last": "2026-08-31",
+  "sum_a": 109941.99,
+  "sum_b": 107709,
+  "total_gap_pct": 2.073,
+  "median_abs_daily_gap_pct": 2.223,
+  "max_abs_daily_gap_pct": 59.201
+ },
+ "burn_USD_routescan_vs_defillama__pre_sep": {
+  "days": 21,
+  "first": "2026-09-01",
+  "last": "2026-09-21",
+  "sum_a": 123231.02,
+  "sum_b": 125532,
+  "total_gap_pct": -1.833,
+  "median_abs_daily_gap_pct": 2.853,
+  "max_abs_daily_gap_pct": 49.165
+ },
+ "burn_USD_routescan_vs_defillama__pre_last10": {
+  "days": 10,
+  "first": "2026-09-12",
+  "last": "2026-09-21",
+  "sum_a": 74873.04,
+  "sum_b": 78130,
+  "total_gap_pct": -4.169,
+  "median_abs_daily_gap_pct": 3.592,
+  "max_abs_daily_gap_pct": 9.736
+ },
+ "burn_USD_routescan_vs_defillama__f5": {
+  "days": 21,
+  "first": "2026-09-28",
+  "last": "2026-10-18",
+  "sum_a": 312296.03,
+  "sum_b": 308841,
+  "total_gap_pct": 1.119,
+  "median_abs_daily_gap_pct": 1.369,
+  "max_abs_daily_gap_pct": 6.891
+ },
+ "burn_USD_routescan_vs_defillama__f2_5": {
+  "days": 20,
+  "first": "2026-10-20",
+  "last": "2026-11-08",
+  "sum_a": 200803.54,
+  "sum_b": 199735,
+  "total_gap_pct": 0.535,
+  "median_abs_daily_gap_pct": 2.231,
+  "max_abs_daily_gap_pct": 7.45
+ },
+ "burn_USD_routescan_vs_defillama__f7_5": {
+  "days": 15,
+  "first": "2026-11-11",
+  "last": "2026-11-25",
+  "sum_a": 187369.13,
+  "sum_b": 184160,
+  "total_gap_pct": 1.743,
+  "median_abs_daily_gap_pct": 1.206,
+  "max_abs_daily_gap_pct": 8.267
+ }
+}

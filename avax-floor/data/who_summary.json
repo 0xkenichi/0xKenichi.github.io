@@ -1,0 +1,308 @@
+{
+ "pre_aug": {
+  "label": "Before Helicon, Aug (floor 1 wei)",
+  "blocks_sampled": 300,
+  "txs_sampled": 9448,
+  "tx_per_block": 31.49,
+  "est_tx_per_day": 2228642,
+  "class_share_pct": {
+   "native transfer": 1.7,
+   "contract call": 80.2,
+   "call, no logs": 14.1,
+   "failed": 4.0,
+   "contract creation": 0.0
+  },
+  "class_est_tx_per_day": {
+   "native transfer": 36798,
+   "contract call": 1786829,
+   "call, no logs": 314907,
+   "failed": 89872,
+   "contract creation": 236
+  },
+  "zero_value_share_pct": 98.2,
+  "distinct_senders": 1950,
+  "top1_sender_share_pct": 3.3,
+  "top10_senders_share_pct": 9.7,
+  "top10_senders_share_of_fees_pct": 3.5,
+  "top10_to_share_pct": 87.0,
+  "base_fee_share_of_fees_pct": 10.2,
+  "median_fee_per_tx_navax": 4558,
+  "blocks_per_day": 78817,
+  "est_base_fee_burn_avax_per_day": 32.1,
+  "est_tip_burn_avax_per_day": 282.4,
+  "est_total_burn_avax_per_day_from_sample": 314.5,
+  "est_tx_per_day_from_sample": 2482201,
+  "est_gas_per_day_billion": 341.0,
+  "mean_fee_per_tx_navax": 126699,
+  "ci95_gas_bn_per_day": [
+   304.8,
+   375.9
+  ],
+  "ci95_base_avax_per_day": [
+   26.7,
+   38.4
+  ],
+  "ci95_tip_avax_per_day": [
+   144.5,
+   450.2
+  ],
+  "share_to_destinations_absent_after_pct": 92.0,
+  "est_tx_per_day_to_absent_destinations": 2050313,
+  "xpower_share_pct": 69.4,
+  "xpower_est_tx_per_day": 1546934
+ },
+ "pre_sep": {
+  "label": "Before Helicon, 1-21 Sep (floor 1 wei)",
+  "blocks_sampled": 300,
+  "txs_sampled": 4912,
+  "tx_per_block": 16.37,
+  "est_tx_per_day": 1300430,
+  "class_share_pct": {
+   "native transfer": 2.8,
+   "contract call": 63.5,
+   "call, no logs": 25.8,
+   "failed": 7.7,
+   "contract creation": 0.2
+  },
+  "class_est_tx_per_day": {
+   "native transfer": 36535,
+   "contract call": 826006,
+   "call, no logs": 335433,
+   "failed": 100339,
+   "contract creation": 2118
+  },
+  "zero_value_share_pct": 96.0,
+  "distinct_senders": 1488,
+  "top1_sender_share_pct": 6.7,
+  "top10_senders_share_pct": 17.0,
+  "top10_senders_share_of_fees_pct": 2.9,
+  "top10_to_share_pct": 73.1,
+  "base_fee_share_of_fees_pct": 8.3,
+  "median_fee_per_tx_navax": 7064,
+  "blocks_per_day": 81459,
+  "est_base_fee_burn_avax_per_day": 33.6,
+  "est_tip_burn_avax_per_day": 373.4,
+  "est_total_burn_avax_per_day_from_sample": 407.1,
+  "est_tx_per_day_from_sample": 1333752,
+  "est_gas_per_day_billion": 369.5,
+  "mean_fee_per_tx_navax": 305194,
+  "ci95_gas_bn_per_day": [
+   310.5,
+   427.7
+  ],
+  "ci95_base_avax_per_day": [
+   27.2,
+   40.4
+  ],
+  "ci95_tip_avax_per_day": [
+   206.3,
+   591.0
+  ],
+  "share_to_destinations_absent_after_pct": 78.7,
+  "est_tx_per_day_to_absent_destinations": 1023241,
+  "xpower_share_pct": 44.7,
+  "xpower_est_tx_per_day": 581911
+ },
+ "pre_last10": {
+  "label": "Last 10 days before Helicon (12-21 Sep)",
+  "blocks_sampled": 300,
+  "txs_sampled": 2670,
+  "tx_per_block": 8.9,
+  "est_tx_per_day": 719652,
+  "class_share_pct": {
+   "native transfer": 3.5,
+   "contract call": 39.4,
+   "call, no logs": 40.4,
+   "failed": 16.4,
+   "contract creation": 0.4
+  },
+  "class_est_tx_per_day": {
+   "native transfer": 25067,
+   "contract call": 283548,
+   "call, no logs": 290556,
+   "failed": 117786,
+   "contract creation": 2695
+  },
+  "zero_value_share_pct": 93.0,
+  "distinct_senders": 800,
+  "top1_sender_share_pct": 12.7,
+  "top10_senders_share_pct": 29.1,
+  "top10_senders_share_of_fees_pct": 49.8,
+  "top10_to_share_pct": 48.6,
+  "base_fee_share_of_fees_pct": 3.6,
+  "median_fee_per_tx_navax": 21607,
+  "blocks_per_day": 81401,
+  "est_base_fee_burn_avax_per_day": 29.6,
+  "est_tip_burn_avax_per_day": 790.9,
+  "est_total_burn_avax_per_day_from_sample": 820.6,
+  "est_tx_per_day_from_sample": 724472,
+  "est_gas_per_day_billion": 415.5,
+  "mean_fee_per_tx_navax": 1132631,
+  "ci95_gas_bn_per_day": [
+   346.9,
+   493.1
+  ],
+  "ci95_base_avax_per_day": [
+   24.1,
+   35.9
+  ],
+  "ci95_tip_avax_per_day": [
+   339.3,
+   1371.8
+  ],
+  "share_to_destinations_absent_after_pct": 56.6,
+  "est_tx_per_day_to_absent_destinations": 407533,
+  "xpower_share_pct": 0.0,
+  "xpower_est_tx_per_day": 0
+ },
+ "f5": {
+  "label": "Floor 5 nAVAX",
+  "blocks_sampled": 300,
+  "txs_sampled": 1087,
+  "tx_per_block": 3.62,
+  "est_tx_per_day": 283548,
+  "class_share_pct": {
+   "native transfer": 11.1,
+   "contract call": 65.7,
+   "call, no logs": 4.1,
+   "failed": 19.0,
+   "contract creation": 0.1
+  },
+  "class_est_tx_per_day": {
+   "native transfer": 31563,
+   "contract call": 186250,
+   "call, no logs": 11738,
+   "failed": 53736,
+   "contract creation": 261
+  },
+  "zero_value_share_pct": 88.5,
+  "distinct_senders": 539,
+  "top1_sender_share_pct": 4.0,
+  "top10_senders_share_pct": 15.3,
+  "top10_senders_share_of_fees_pct": 32.6,
+  "top10_to_share_pct": 34.2,
+  "base_fee_share_of_fees_pct": 32.0,
+  "median_fee_per_tx_navax": 1185945,
+  "blocks_per_day": 77776,
+  "est_base_fee_burn_avax_per_day": 454.7,
+  "est_tip_burn_avax_per_day": 965.8,
+  "est_total_burn_avax_per_day_from_sample": 1420.5,
+  "est_tx_per_day_from_sample": 281807,
+  "est_gas_per_day_billion": 82.0,
+  "mean_fee_per_tx_navax": 5040720,
+  "ci95_gas_bn_per_day": [
+   66.6,
+   98.7
+  ],
+  "ci95_base_avax_per_day": [
+   349.6,
+   568.7
+  ],
+  "ci95_tip_avax_per_day": [
+   522.5,
+   1533.9
+  ],
+  "xpower_share_pct": 0.0,
+  "xpower_est_tx_per_day": 0
+ },
+ "f2_5": {
+  "label": "Floor 2.5 nAVAX",
+  "blocks_sampled": 300,
+  "txs_sampled": 976,
+  "tx_per_block": 3.25,
+  "est_tx_per_day": 297067,
+  "class_share_pct": {
+   "native transfer": 11.9,
+   "contract call": 72.6,
+   "call, no logs": 5.9,
+   "failed": 9.3,
+   "contract creation": 0.2
+  },
+  "class_est_tx_per_day": {
+   "native transfer": 35307,
+   "contract call": 215800,
+   "call, no logs": 17654,
+   "failed": 27698,
+   "contract creation": 609
+  },
+  "zero_value_share_pct": 85.0,
+  "distinct_senders": 563,
+  "top1_sender_share_pct": 2.0,
+  "top10_senders_share_pct": 13.7,
+  "top10_senders_share_of_fees_pct": 4.4,
+  "top10_to_share_pct": 34.7,
+  "base_fee_share_of_fees_pct": 37.4,
+  "median_fee_per_tx_navax": 562500,
+  "blocks_per_day": 89563,
+  "est_base_fee_burn_avax_per_day": 241.7,
+  "est_tip_burn_avax_per_day": 405.2,
+  "est_total_burn_avax_per_day_from_sample": 646.9,
+  "est_tx_per_day_from_sample": 291380,
+  "est_gas_per_day_billion": 92.9,
+  "mean_fee_per_tx_navax": 2220091,
+  "ci95_gas_bn_per_day": [
+   70.0,
+   122.1
+  ],
+  "ci95_base_avax_per_day": [
+   183.9,
+   315.5
+  ],
+  "ci95_tip_avax_per_day": [
+   219.7,
+   645.1
+  ],
+  "xpower_share_pct": 0.0,
+  "xpower_est_tx_per_day": 0
+ },
+ "f7_5": {
+  "label": "Floor 7.5 nAVAX (to 25 Nov, last complete day)",
+  "blocks_sampled": 300,
+  "txs_sampled": 1091,
+  "tx_per_block": 3.64,
+  "est_tx_per_day": 347741,
+  "class_share_pct": {
+   "native transfer": 12.1,
+   "contract call": 68.9,
+   "call, no logs": 10.1,
+   "failed": 8.9,
+   "contract creation": 0.0
+  },
+  "class_est_tx_per_day": {
+   "native transfer": 42073,
+   "contract call": 239689,
+   "call, no logs": 35061,
+   "failed": 30917,
+   "contract creation": 0
+  },
+  "zero_value_share_pct": 88.3,
+  "distinct_senders": 500,
+  "top1_sender_share_pct": 4.0,
+  "top10_senders_share_pct": 20.9,
+  "top10_senders_share_of_fees_pct": 7.4,
+  "top10_to_share_pct": 43.6,
+  "base_fee_share_of_fees_pct": 43.4,
+  "median_fee_per_tx_navax": 1125000,
+  "blocks_per_day": 94431,
+  "est_base_fee_burn_avax_per_day": 692.7,
+  "est_tip_burn_avax_per_day": 905.1,
+  "est_total_burn_avax_per_day_from_sample": 1597.8,
+  "est_tx_per_day_from_sample": 343414,
+  "est_gas_per_day_billion": 89.0,
+  "mean_fee_per_tx_navax": 4652573,
+  "ci95_gas_bn_per_day": [
+   66.6,
+   118.9
+  ],
+  "ci95_base_avax_per_day": [
+   521.3,
+   920.3
+  ],
+  "ci95_tip_avax_per_day": [
+   388.6,
+   1705.2
+  ],
+  "xpower_share_pct": 0.0,
+  "xpower_est_tx_per_day": 0
+ }
+}

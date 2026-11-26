@@ -1,0 +1,108 @@
+{
+ "foundation_price_of_a_transaction_jan2025_aug2026": {
+  "published": {
+   "protocol_revenue_usd": 282200000.0,
+   "tx_fees_usd": 9600000.0,
+   "fee_over_revenue_pct": 3.39,
+   "source": "avalanche.com/about/blog/the-price-of-a-transaction-benchmarking-the-avalanche-c-chain-on-cost-and-capture"
+  },
+  "ours": {
+   "from": "2025-01-01",
+   "to": "2026-08-31",
+   "days": 608,
+   "price_days_filled": 142,
+   "routescan_burn_avax": 503105,
+   "routescan_burn_usd": 9752001,
+   "defillama_chain_fees_usd": 9531681,
+   "defillama_app_fees_usd": 264105894,
+   "ratio_defillama_chain_over_app_pct": 3.61,
+   "ratio_routescan_burn_over_app_pct": 3.69
+  }
+ },
+ "foundation_latest_month_aug2026": {
+  "published": {
+   "fee_over_revenue_pct": 1.13
+  },
+  "ours": {
+   "from": "2026-08-01",
+   "to": "2026-08-31",
+   "days": 31,
+   "price_days_filled": 1,
+   "routescan_burn_avax": 15795,
+   "routescan_burn_usd": 109674,
+   "defillama_chain_fees_usd": 107709,
+   "defillama_app_fees_usd": 8408427,
+   "ratio_defillama_chain_over_app_pct": 1.28,
+   "ratio_routescan_burn_over_app_pct": 1.3
+  }
+ },
+ "foundation_jan2025_month": {
+  "published": {
+   "fee_over_revenue_pct": 5.79
+  },
+  "ours": {
+   "from": "2025-01-01",
+   "to": "2025-01-31",
+   "days": 31,
+   "price_days_filled": 10,
+   "routescan_burn_avax": 11525,
+   "routescan_burn_usd": 425271,
+   "defillama_chain_fees_usd": 423563,
+   "defillama_app_fees_usd": 13623040,
+   "ratio_defillama_chain_over_app_pct": 3.11,
+   "ratio_routescan_burn_over_app_pct": 3.12
+  }
+ },
+ "foundation_burn_since_2024": {
+  "published": {
+   "burned_usd": 23500000.0,
+   "note": "GCI post (12 Aug 2026): burned C-Chain fees since start of 2024, ~$23.5M; end date not stated, assumed end of Jun/Jul 2026"
+  },
+  "ours_to_jun_30": {
+   "from": "2024-01-01",
+   "to": "2026-06-30",
+   "days": 912,
+   "price_days_filled": 197,
+   "routescan_burn_avax": 942143,
+   "routescan_burn_usd": 26639934,
+   "defillama_chain_fees_usd": 27261208,
+   "defillama_app_fees_usd": 400959603,
+   "ratio_defillama_chain_over_app_pct": 6.8,
+   "ratio_routescan_burn_over_app_pct": 6.64
+  },
+  "ours_to_jul_31": {
+   "from": "2024-01-01",
+   "to": "2026-07-31",
+   "days": 943,
+   "price_days_filled": 206,
+   "routescan_burn_avax": 951158,
+   "routescan_burn_usd": 26699687,
+   "defillama_chain_fees_usd": 27320829,
+   "defillama_app_fees_usd": 408491898,
+   "ratio_defillama_chain_over_app_pct": 6.69,
+   "ratio_routescan_burn_over_app_pct": 6.54
+  }
+ },
+ "foundation_aug2026_tx_per_day": {
+  "published": 2230000.0,
+  "ours_routescan_aug_mean": 2228642
+ },
+ "foundation_june2026_month": {
+  "published": {
+   "ngcp_usd": 3100000.0,
+   "note": "NGCP needs on-chain expense data we don't have; shown for scale only"
+  },
+  "ours": {
+   "from": "2026-06-01",
+   "to": "2026-06-30",
+   "days": 30,
+   "price_days_filled": 6,
+   "routescan_burn_avax": 16433,
+   "routescan_burn_usd": 113695,
+   "defillama_chain_fees_usd": 110006,
+   "defillama_app_fees_usd": 7918298,
+   "ratio_defillama_chain_over_app_pct": 1.39,
+   "ratio_routescan_burn_over_app_pct": 1.44
+  }
+ }
+}

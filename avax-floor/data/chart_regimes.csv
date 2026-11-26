@@ -1,0 +1,7 @@
+regime,label,from,to,days,floor_navax,tx_per_day,avax_burned_per_day_median,chain_share_pct,gas_per_day_bn,base_fee_burn_avax_per_day,base_ci_lo,base_ci_hi,tip_burn_avax_per_day,tip_ci_lo,tip_ci_hi,tx_day_contract_call_with_logs,tx_day_call_no_logs,tx_day_failed,tx_day_native_transfer,tx_day_xpower
+pre_aug,"Before Helicon, Aug (floor 1 wei)",2026-08-01,2026-08-31,31,1e-09,2228642,430.3,1.31,341.0,32.1,26.7,38.4,282.4,144.5,450.2,1786829,314907,89872,36798,1546934
+pre_sep,"Before Helicon, 1-21 Sep (floor 1 wei)",2026-09-01,2026-09-21,21,1e-09,1300430,573.7,1.96,369.5,33.6,27.2,40.4,373.4,206.3,591.0,826006,335433,100339,36535,581911
+pre_last10,Last 10 days before Helicon (12-21 Sep),2026-09-12,2026-09-21,10,1e-09,719652,703.8,2.44,415.5,29.6,24.1,35.9,790.9,339.3,1371.8,283548,290556,117786,25067,0
+f5,Floor 5 nAVAX,2026-09-28,2026-10-18,21,5.0,283548,1304.4,4.5,82.0,454.7,349.6,568.7,965.8,522.5,1533.9,186250,11738,53736,31563,0
+f2_5,Floor 2.5 nAVAX,2026-10-20,2026-11-08,20,2.5,297067,827.1,3.82,92.9,241.7,183.9,315.5,405.2,219.7,645.1,215800,17654,27698,35307,0
+f7_5,"Floor 7.5 nAVAX (to 25 Nov, last complete day)",2026-11-11,2026-11-25,15,7.5,347741,1723.5,4.91,89.0,692.7,521.3,920.3,905.1,388.6,1705.2,239689,35061,30917,42073,0

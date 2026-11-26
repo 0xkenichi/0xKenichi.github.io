@@ -1,0 +1,7 @@
+regime,label,from,to,days,floor_navax,base_fee_navax_median,tx_per_day_mean,tx_per_day_median,avax_burned_per_day_mean,avax_burned_per_day_median,usd_burned_per_day_mean,usd_burned_per_day_median,app_fees_usd_per_day_mean,chain_share_pct_pooled,chain_share_pct_median_day,avax_price_mean,fee_per_tx_navax_pooled,max_day_share_of_burn_pct,days_burn_above_last10_pre_median_pct,days_tx_below_last10_pre_min_pct
+pre_aug,"Before Helicon, Aug (floor 1 wei)",2026-08-01,2026-08-31,31,1e-09,0.063,2228642,2318073,509.5,430.3,3547,2808,271240,1.31,1.02,6.82,228622,9.1,32,0
+pre_sep,"Before Helicon, 1-21 Sep (floor 1 wei)",2026-09-01,2026-09-21,21,1e-09,0.086,1300430,1062301,695.0,573.7,5868,4382,299477,1.96,1.41,7.94,534440,11.9,38,0
+pre_last10,Last 10 days before Helicon (12-21 Sep),2026-09-12,2026-09-21,10,1e-09,0.062,719652,673610,823.2,703.8,7487,5374,306478,2.44,1.86,8.35,1143866,21.2,50,0
+f5,Floor 5 nAVAX,2026-09-28,2026-10-18,21,5.0,5.0,283548,283053,1377.4,1304.4,14871,13435,330623,4.5,4.42,10.68,4857686,9.8,90,100
+f2_5,Floor 2.5 nAVAX,2026-10-20,2026-11-08,20,2.5,2.5,297067,283846,1155.0,827.1,10040,7007,263047,3.82,3.0,8.79,3888138,26.7,60,100
+f7_5,"Floor 7.5 nAVAX (to 25 Nov, last complete day)",2026-11-11,2026-11-25,15,7.5,7.5,347741,334606,1698.5,1723.5,12491,12441,254416,4.91,4.12,7.28,4884385,12.6,100,100
