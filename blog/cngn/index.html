@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How much cNGN is on-chain? Contract reads, checked against the auditor's reports | Kenichi</title>
+    <meta name="description" content="I read the naira stablecoin cNGN's supply from each chain's contract. ₦2,377M → ₦4,751M on the five chains read at both dates (₦4,853M with Solana), 1 Aug to 4 Nov 2026. At the auditor's 31 Aug cut-off, my reads match its per-chain figures to the kobo.">
+    <meta property="og:title" content="How much cNGN is on-chain? Contract reads, checked against the auditor's reports">
+    <meta property="og:description" content="₦2,377M → ₦4,751M on the five chains read at both dates (₦4,853M with Solana), 1 Aug to 4 Nov 2026. At the auditor's 31 Aug cut-off, my contract reads match its per-chain figures to the kobo.">
+    <meta property="og:image" content="https://0xkenichi.github.io/blog/cngn/cngn-supply-by-chain.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0f172a;
+            --text: #e2e8f0;
+            --muted: #94a3b8;
+            --heading: #f8fafc;
+            --accent: #0ea5e9;
+            --line: rgba(255, 255, 255, 0.1);
+            --card: rgba(30, 41, 59, 0.7);
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+        a { color: var(--accent); }
+        .top {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 24px 16px 0;
+            font-size: 15px;
+        }
+        .top a { text-decoration: none; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 20px; color: var(--heading); }
+        article { max-width: 760px; margin: 0 auto; padding: 24px 16px 80px; }
+        h1, h2 { font-family: 'Outfit', sans-serif; color: var(--heading); line-height: 1.2; }
+        h1 { font-size: clamp(32px, 6vw, 46px); margin: 24px 0 8px; }
+        h2 { font-size: 28px; margin: 48px 0 12px; }
+        .meta { color: var(--muted); font-size: 15px; margin: 0 0 28px; }
+        .links { display: flex; flex-wrap: wrap; gap: 10px 18px; margin: 0 0 28px; font-size: 16px; }
+        .links a {
+            border: 1px solid var(--line);
+            background: var(--card);
+            border-radius: 999px;
+            padding: 6px 14px;
+            text-decoration: none;
+        }
+        figure { margin: 28px 0; }
+        figure a { display: block; }
+        figure img { width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--line); display: block; }
+        figcaption { color: var(--muted); font-size: 14px; margin-top: 8px; }
+        code { background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 1px 6px; font-size: 0.88em; overflow-wrap: anywhere; word-break: break-word; }
+        table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 16px; font-variant-numeric: tabular-nums; }
+        th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+        th { color: var(--muted); font-weight: 500; }
+        td.n, th.n { text-align: right; white-space: nowrap; }
+        td code { white-space: nowrap; overflow-wrap: normal; word-break: normal; }
+        .scroll th:first-child, .scroll td:first-child { position: sticky; left: 0; background: var(--bg); }
+        .note { color: var(--muted); font-size: 14px; margin: -8px 0 16px; }
+        .phone-only { display: none; }
+        blockquote { margin: 16px 0; padding: 4px 18px; border-left: 3px solid var(--accent); color: var(--heading); }
+        li { margin: 6px 0; }
+        .dated { border: 1px solid var(--line); background: var(--card); border-radius: 14px; padding: 4px 18px 8px; margin: 24px 0; }
+        .end { color: var(--muted); font-size: 15px; margin-top: 48px; border-top: 1px solid var(--line); padding-top: 18px; }
+        @media (max-width: 480px) {
+            table { font-size: 14px; }
+            th, td { padding: 8px 6px; }
+            h2 { font-size: 24px; }
+            blockquote { padding: 4px 12px; }
+            .dated { padding: 4px 12px 8px; }
+            .phone-only { display: inline; }
+        }
+    </style>
+</head>
+<body>
+    <div class="top"><a href="/">Kenichi</a></div>
+    <article>
+        <h1>How much cNGN is on-chain? Contract reads, checked against the auditor's reports</h1>
+        <p class="meta">Olanrewaju "Kenichi" Animashaun · Lagos · 25 November 2026 · Series to 4 Nov 2026, spot check on 25 Nov</p>
+        <p class="links">
+            <a href="https://docs.cngn.co/guides/contract-addresses">Issuer's contract list</a>
+            <a href="https://drive.google.com/file/d/1Hw3aKTD29QxEqawYQjpRmGtVuK1_lV92/view">31 Aug auditor's report (PDF)</a>
+            <a href="https://drive.google.com/file/d/1RlKjA5vrPGHOnOcvJfl-VRw1ndeYWrP5/view">31 Oct auditor's report (PDF)</a>
+            <a href="https://cngn.co/transparency">cNGN transparency page</a>
+            <a href="#reproduce">Data and scripts</a>
+        </p>
+
+        <p>cNGN is a naira stablecoin (1 cNGN = ₦1) issued by Wrapped CBDC Limited, a member of the Africa Stablecoin Consortium. The issuer's list names twelve mainnet contracts on different chains. I wanted two answers: how much cNGN exists on-chain, and does that match what the issuer reports?</p>
+        <p>A dashboard can only show the chains its data provider indexes, and cNGN sits on several small or new ones (Asset Chain, Monad, Arc, ADI, Bantu). So I went to the source. I read each token contract's total supply directly, then checked my reads against the independent auditor's monthly report.</p>
+
+        <blockquote>
+            <p><strong>Supply doubled in three months:</strong> ₦2,377M → ₦4,751M on the five chains read at both dates (₦4,853M with Solana), 1 Aug to 4 Nov 2026. BNB Chain did most of it, growing from ₦395M to ₦2,199M.</p>
+            <p><strong>My reads equal the auditor's figures:</strong> at the report's cut-off, 9:45 pm WAT on 31 Aug, all five chains I read match its per-chain figures to the kobo. The 61.07M cNGN remainder is exactly Solana + Bantu + Polygon, which I didn't read at that time. The latest report, 31 Oct, matches the same way. My first comparison, about 15 hours after the 31 Aug cut-off, was 13% high because Base and Celo minted a net 501M cNGN in between.</p>
+        </blockquote>
+
+        <h2>Method</h2>
+        <ol>
+            <li><strong>Addresses from the issuer only.</strong> I used the mainnet list at docs.cngn.co. Some third-party sites list different cNGN addresses. I ignored them.</li>
+            <li><strong>One call per contract per date.</strong> On each EVM chain I called <code>totalSupply()</code> at a fixed block through the chain's public RPC, then divided by 10<sup>6</sup>. All five contracts report 6 decimals.</li>
+            <li><strong>Fixed times.</strong> For the series, I took a block within 30 minutes of 12:00 UTC on the 1st and 15th of each month, from 1 Jan 2025 to 1 Nov 2026, plus the latest block on 4 Nov 2026. I found each block by searching on block timestamps. For the check, I took the last block at or before the auditor's cut-off: 20:45:00 UTC (9:45 pm WAT) on 31 Aug 2026.</li>
+            <li><strong>Public endpoints.</strong> mainnet.base.org (Base), Blast API (BNB Chain), forno.celo.org (Celo), dRPC and 1RPC (Ethereum), mainnet-rpc.assetchain.org (Asset Chain). For Solana, <code>getTokenSupply</code> on Solana's public RPC. The 25 Nov read used publicnode.com for Base, BNB Chain, Ethereum and Polygon.</li>
+            <li><strong>Odd values re-read.</strong> Seven reads came back as zero. Two were caught in the first run: BNB Chain on 15 Jan 2026 and Asset Chain on 1 Aug 2025. Five more, Asset Chain from 15 Apr to 15 Jun 2025, stayed in the saved file until I re-read them on 25 Nov: they were 10,224 cNGN in mid-April, rising to 14.3M by 15 Jun. The data file has the corrected values.</li>
+        </ol>
+        <p>Which chains I read, and when:</p>
+        <div style="overflow-x:auto">
+        <table>
+            <thead><tr><th>Chain</th><th>Contract</th><th>Read</th></tr></thead>
+            <tbody>
+                <tr><td>Base</td><td><code>0x46C8…EF5F</code></td><td>Every date</td></tr>
+                <tr><td>BNB Chain</td><td><code>0xa8AE…F058</code></td><td>Every date</td></tr>
+                <tr><td>Celo</td><td><code>0xF682…1a4f</code></td><td>Every date</td></tr>
+                <tr><td>Ethereum</td><td><code>0x17CD…8dab</code></td><td>Every date</td></tr>
+                <tr><td>Asset Chain</td><td><code>0x7923…FC4F</code></td><td>Every date</td></tr>
+                <tr><td>Solana</td><td><code>3jiq…gkv8</code></td><td>4 and 25 Nov</td></tr>
+                <tr><td>Polygon, Monad, ADI</td><td>see list</td><td>4 and 25 Nov (under ₦25K together)</td></tr>
+                <tr><td>Arc</td><td>see list</td><td>Not counted: its RPC didn't respond</td></tr>
+                <tr><td>Bantu, Stellar</td><td>see list</td><td>Not read</td></tr>
+            </tbody>
+        </table>
+        </div>
+
+        <h2>What the contracts show</h2>
+        <figure>
+            <a href="cngn-supply-by-chain.png" title="Open the full-size chart">
+                <picture>
+                    <source media="(max-width: 600px)" srcset="cngn-supply-by-chain-phone.png">
+                    <img src="cngn-supply-by-chain.png" width="2000" height="1120" alt="Stacked area chart of cNGN supply by chain, January 2025 to 4 November 2026. Base is the largest layer from mid-December 2025; BNB Chain grows sharply from August 2026; Celo appears in August 2026.">
+                </picture>
+            </a>
+            <figcaption>The five EVM chains read at every date, on the 1st and 15th of each month, to 4 Nov. Solana isn't in the stack because I only have its 4 Nov figure. Tap or click for the full-size chart.</figcaption>
+        </figure>
+        <div style="overflow-x:auto">
+        <table>
+            <thead><tr><th>Chain</th><th class="n">1 Aug</th><th class="n">4 Nov</th></tr></thead>
+            <tbody>
+                <tr><td>Base</td><td class="n">₦1,880M</td><td class="n">₦2,233M</td></tr>
+                <tr><td>BNB Chain</td><td class="n">₦395M</td><td class="n">₦2,199M</td></tr>
+                <tr><td>Celo</td><td class="n">₦0</td><td class="n">₦241M</td></tr>
+                <tr><td>Asset Chain</td><td class="n">₦102M</td><td class="n">₦75M</td></tr>
+                <tr><td>Ethereum</td><td class="n">₦0.1M</td><td class="n">₦3.5M</td></tr>
+                <tr><td><strong>Five chains</strong></td><td class="n"><strong>₦2,377M</strong></td><td class="n"><strong>₦4,751M</strong></td></tr>
+                <tr><td>Solana</td><td class="n">not read</td><td class="n">₦102M</td></tr>
+                <tr><td>With Solana</td><td class="n">–</td><td class="n">₦4,853M</td></tr>
+            </tbody>
+        </table>
+        </div>
+        <ul>
+            <li>BNB Chain grew 5.6 times. By 4 Nov it was close to Base, the largest chain at every read since mid-December 2025.</li>
+            <li>Celo's first supply shows up in the 15 Aug read. Asset Chain peaked at ₦554M on 1 Feb 2026 and was ₦75M on 4 Nov.</li>
+            <li>Supply moves a lot between reads. Base held ₦2,835M on 15 Sep and ₦2,099M on 1 Oct. Treat any single point as a snapshot.</li>
+        </ul>
+
+        <h2>Checking against the auditor's reports</h2>
+        <p>A contract read shows what exists on-chain. To know whether my reads are right, I need a second source that doesn't depend on my method. For cNGN that is the monthly report by Bala Isah Garba and Company (Chartered Accountants), linked from the issuer's transparency page.</p>
+        <p>The 31 Aug 2026 report is an examination under ISAE 3000 (Revised). Its cut-off is "as of 31st August 2026 at 9:45 pm West African Time", which is 20:45 UTC. It states <strong>3,329,961,223.91 cNGN</strong> in circulation against ₦3,550,845,048.39 of reserve assets, and its Table 3 splits the cNGN by network. I re-read the five EVM chains at that moment with <code>python3 supply_at.py 2026-08-31T20:45:00</code>.</p>
+        <div class="scroll" style="overflow-x:auto">
+        <table>
+            <thead><tr><th>Chain</th><th class="n">Auditor</th><th class="n">My read</th><th class="n">Diff.</th></tr></thead>
+            <tbody>
+                <tr><td>Base</td><td class="n">2,078,532,784.00</td><td class="n">2,078,532,784.00</td><td class="n">0.00</td></tr>
+                <tr><td>BNB Chain</td><td class="n">954,400,390.67</td><td class="n">954,400,390.67</td><td class="n">0.00</td></tr>
+                <tr><td>Celo</td><td class="n">133,788,554.00</td><td class="n">133,788,554.00</td><td class="n">0.00</td></tr>
+                <tr><td>Ethereum</td><td class="n">137,326.40</td><td class="n">137,326.40</td><td class="n">0.00</td></tr>
+                <tr><td>Asset Chain</td><td class="n">102,032,227.07</td><td class="n">102,032,227.07</td><td class="n">0.00</td></tr>
+                <tr><td>Solana</td><td class="n">60,250,023.00</td><td class="n">not read</td><td class="n">–</td></tr>
+                <tr><td>Bantu</td><td class="n">807,343.37</td><td class="n">not read</td><td class="n">–</td></tr>
+                <tr><td>Polygon</td><td class="n">12,575.40</td><td class="n">not read</td><td class="n">–</td></tr>
+                <tr><td><strong>Total</strong></td><td class="n"><strong>3,329,961,223.91</strong></td><td class="n"><strong>3,268,891,282.14</strong></td><td class="n"><strong>61,069,941.77</strong></td></tr>
+            </tbody>
+        </table>
+        </div>
+        <p class="note">cNGN at 20:45 UTC on 31 Aug 2026. "Auditor" is Table 3 of the report. "My read" is <code>totalSupply()</code> at the last block at or before that time.<span class="phone-only"> Swipe the table sideways to see every column.</span></p>
+        <p>All five chains I read match to the kobo. The contracts store six decimals, and my unrounded reads differ from the report only after the second decimal: Base reads 2,078,532,783.999372, for example. The 61,069,941.77 cNGN gap is exactly the sum of the three networks I didn't read at that time: Solana (60,250,023.00), Bantu (807,343.37) and Polygon (12,575.40). A read at 23:59:59 UTC gives the same five figures, so supply on these chains was unchanged at the end of the day.</p>
+        <p><strong>The latest report, 31 Oct 2026, matches too.</strong> Same auditor, same 9:45 pm WAT cut-off, total 4,413,216,931.49 cNGN. At 20:45 UTC on 31 Oct (<code>python3 supply_at.py 2026-10-31T20:45:00</code>) my reads are Base 2,417,804,432.10, BNB Chain 1,626,985,458.38, Celo 190,665,475.63, Ethereum 237,806.40 and Asset Chain 74,834,217.03, each equal to the report's row. The 102,689,541.95 cNGN gap is exactly Solana (101,749,983.88), Bantu (922,852.12) and Polygon (16,705.95).</p>
+
+        <h2>Why my first comparison was 13% high</h2>
+        <p>My first comparison used my nearest sample, about 12:00 UTC on 1 Sep, some 15 hours after the cut-off. It came out 13.2% above the report's total. A gap that size needs an explanation before anyone relies on the number, so I re-read at the cut-off.</p>
+        <div style="overflow-x:auto">
+        <table>
+            <thead><tr><th>Chain</th><th class="n">Cut-off</th><th class="n">1 Sep, 12:00</th><th class="n">Change</th></tr></thead>
+            <tbody>
+                <tr><td>Base</td><td class="n">2,078.53</td><td class="n">2,353.53</td><td class="n">+275.00</td></tr>
+                <tr><td>BNB Chain</td><td class="n">954.40</td><td class="n">954.40</td><td class="n">0</td></tr>
+                <tr><td>Celo</td><td class="n">133.79</td><td class="n">359.79</td><td class="n">+226.00</td></tr>
+                <tr><td>Ethereum</td><td class="n">0.14</td><td class="n">0.14</td><td class="n">0</td></tr>
+                <tr><td>Asset Chain</td><td class="n">102.03</td><td class="n">102.03</td><td class="n">0</td></tr>
+                <tr><td><strong>Total</strong></td><td class="n"><strong>3,268.89</strong></td><td class="n"><strong>3,769.89</strong></td><td class="n"><strong>+501.00</strong></td></tr>
+            </tbody>
+        </table>
+        </div>
+        <p class="note">Millions of cNGN. Cut-off is 20:45 UTC on 31 Aug.</p>
+        <p>Between the cut-off and midday on 1 Sep, net supply rose by exactly 275M cNGN on Base and 226M on Celo. The other three chains didn't move. A reserve check is only as good as its timestamp.</p>
+
+        <div class="dated">
+            <h2>Update, 25 November 2026</h2>
+            <p>At 19:50 UTC on 25 Nov I re-read every listed EVM contract and Solana with <code>supply_now.py</code>, and loaded the issuer's live table at cngn.co/transparency in the same minute. Every chain I could read matched the issuer's row to the kobo.</p>
+            <div style="overflow-x:auto">
+            <table>
+                <thead><tr><th>Chain</th><th class="n">4 Nov</th><th class="n">25 Nov</th><th class="n">Issuer</th></tr></thead>
+                <tbody>
+                    <tr><td>Base</td><td class="n">2,232.88</td><td class="n">2,285.29</td><td class="n">2,285.29</td></tr>
+                    <tr><td>BNB Chain</td><td class="n">2,198.86</td><td class="n">1,511.12</td><td class="n">1,511.12</td></tr>
+                    <tr><td>Celo</td><td class="n">240.67</td><td class="n">251.14</td><td class="n">251.14</td></tr>
+                    <tr><td>Ethereum</td><td class="n">3.52</td><td class="n">23.54</td><td class="n">23.54</td></tr>
+                    <tr><td>Asset Chain</td><td class="n">74.83</td><td class="n">99.83</td><td class="n">99.83</td></tr>
+                    <tr><td><strong>Five chains</strong></td><td class="n"><strong>4,750.76</strong></td><td class="n"><strong>4,170.92</strong></td><td class="n"><strong>4,170.92</strong></td></tr>
+                    <tr><td>Solana</td><td class="n">≈102</td><td class="n">111.25</td><td class="n">111.25</td></tr>
+                </tbody>
+            </table>
+            </div>
+            <p class="note">Millions of cNGN. "25 Nov" is my read; "Issuer" is the table at cngn.co/transparency, loaded the same minute.</p>
+            <p>The five-chain total fell 12% in three weeks, from 4,750.76M to 4,170.92M. BNB Chain lost 687.74M, more than the whole drop; Base, Celo, Ethereum and Asset Chain all rose. The issuer's table also shows 23,385.95 cNGN on Polygon, 10 on Monad and 1 on ADI, which match my reads, and 10 on Arc, which I couldn't read. It shows 144,420.00 on Bantu and 935,350.22 on Stellar, which I don't read.</p>
+        </div>
+
+        <h2>Records that disagree</h2>
+        <p>Three public records don't line up. None changes the result above, but each could trip up someone checking cNGN.</p>
+        <ul>
+            <li><strong>Which chains count.</strong> The issuer's docs and its GitHub README list twelve mainnet contracts. The 31 Aug report covers eight networks: it has no Monad, Arc, ADI or Stellar. On 25 Nov the issuer's page showed 935,350.22 cNGN on Stellar and 21 cNGN across Monad, Arc and ADI. I haven't read them at the report dates, so I can't say whether any held cNGN then. The 31 Oct report lists the same eight networks.</li>
+            <li><strong>DIA's cNGN page.</strong> It says the issuer lists mainnet contracts on nine chains, including Lisk, and it reads a Lisk contract (<code>0xC7aB…87c0</code>). Neither the issuer's docs nor its GitHub README listed Lisk when I checked on 25 Nov. The issuer's own transparency API does return a Lisk row, with zero supply, which the page doesn't display.</li>
+            <li><strong>The live "reserves" figure.</strong> The transparency page's "Total amount in Reserves" (4,283,268,528.021 on 25 Nov) equals the sum of its twelve supply rows. So it shows supply, which the issuer says is backed 1:1; it isn't a separate count of reserves. The independent reserve figure is the auditor's report: ₦3,550,845,048.39 against 3,329,961,223.91 cNGN on 31 Aug, an excess of ₦220,883,824.48 (6.6%).</li>
+        </ul>
+
+        <h2>Limits</h2>
+        <ul>
+            <li><strong>Coverage.</strong> Five EVM chains at every date. Solana, Polygon, Monad and ADI on 4 and 25 Nov only. Arc not counted. Bantu and Stellar not read. At the 31 Aug and 31 Oct cut-offs I checked five of each report's eight networks.</li>
+            <li><strong>Snapshots, not flows.</strong> Two samples a month. As 1 Sep shows, supply can move by hundreds of millions between them.</li>
+            <li><strong>Definitions.</strong> The 31 Aug report's note 10 says tokens in circulation "exclude any freeze or test tokens". <code>totalSupply()</code> counts every token minted and not burned. On 31 Aug and 31 Oct the two were equal on all five chains I read. If frozen or test tokens are ever left unburned, the two could differ, and contract reads would run high. (In the 31 Aug report, Table 3's column is headed "Maximum Supply", though its total is the "in circulation" figure in Table 1. The 31 Oct report renames it "Tokens in Circulation" and says frozen and test tokens are found by reconciling on-chain supply with the company's mint and burn records.)</li>
+            <li><strong>Public RPCs.</strong> Free endpoints sometimes return bad values. I caught and re-read seven zeros. Others could slip through.</li>
+        </ul>
+
+        <h2 id="reproduce">How to reproduce it</h2>
+        <p>Four short Python 3 scripts using plain JSON-RPC calls, plus the data and the raw output of each check. <code>supply_series.py</code> and <code>supply_now.py</code> need <code>requests</code>; <code>chart.py</code> needs <code>matplotlib</code>.</p>
+        <ul>
+            <li><a href="data/supply_series.py"><code>supply_series.py</code></a> reads <code>totalSupply()</code> on the five EVM chains on the 1st and 15th of each month and saves the series as JSON: <a href="data/cngn-supply-series.json"><code>cngn-supply-series.json</code></a>.</li>
+            <li><a href="data/supply_now.py"><code>supply_now.py</code></a> reads the current supply on every listed EVM contract, plus Solana. <a href="data/supply_now_2026-11-25_output.txt">25 Nov output</a>.</li>
+            <li><a href="data/supply_at.py"><code>supply_at.py</code></a> reads the exact supply at any UTC moment, for example <code>python3 supply_at.py 2026-08-31T20:45:00</code>. Output <a href="data/supply_at_2026-08-31T20-45-00_output.txt">at the cut-off</a> and <a href="data/supply_at_2026-08-31T23-59-59_output.txt">at 23:59:59 UTC</a>, and <a href="data/supply_at_2026-10-31T20-45-00_output.txt">at the 31 Oct cut-off</a>.</li>
+            <li><a href="data/chart.py"><code>chart.py</code></a> draws the chart from the JSON.</li>
+        </ul>
+        <p>You can also repeat the core read without them: one <code>eth_call</code> to <code>totalSupply()</code> (selector <code>0x18160ddd</code>) on each contract at the block you choose. At the cut-off those blocks were Base 50,709,876, BNB Chain 119,217,654, Celo 76,308,342, Ethereum 25,877,733 and Asset Chain 1,836,295. At the 31 Oct cut-off: Base 53,345,076, BNB Chain 130,923,250, Celo 81,578,742, Ethereum 26,315,218, Asset Chain 2,038,252.</p>
+
+        <h2>What I'd check next</h2>
+        <ul>
+            <li>Read Solana, Bantu and Polygon at 20:45 UTC on 31 Aug, so all eight rows of the report's Table 3 are checked, not five.</li>
+            <li>Repeat the check against the 30 Nov report when it's posted.</li>
+            <li>Track mints, burns and holders between samples, so a 501M jump shows up as the transactions behind it.</li>
+        </ul>
+
+        <p class="end">Kenichi (Olanrewaju Animashaun) · Lagos · Published 25 November 2026. Series to 4 November, spot check on 25 November. I don't work for, and haven't been paid by, cNGN or Wrapped CBDC Limited. <a href="/">Back to my portfolio</a>.</p>
+    </article>
+</body>
+</html>

@@ -1,0 +1,11 @@
+Ethereum     {"supply": 23540244.330535, "decimals": 6, "rpc": "https://ethereum-rpc.publicnode.com"}
+BNB Chain    {"supply": 1511116412.876878, "decimals": 6, "rpc": "https://bsc-rpc.publicnode.com"}
+Polygon      {"supply": 23385.95, "decimals": 6, "rpc": "https://polygon-bor-rpc.publicnode.com"}
+Base         {"supply": 2285288547.100777, "decimals": 6, "rpc": "https://base-rpc.publicnode.com"}
+Celo         {"supply": 251135945.627335, "decimals": 6, "rpc": "https://forno.celo.org"}
+Monad        {"supply": 10.0, "decimals": 6, "rpc": "https://rpc.monad.xyz"}
+Arc          {"error": "https://rpc.arc.io: HTTPSConnectionPool(host='rpc.arc.io', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPS"}
+ADI          {"supply": 1.0, "decimals": 6, "rpc": "https://rpc.adifoundation.ai"}
+Asset Chain  {"supply": 99834217.03, "decimals": 6, "rpc": "https://mainnet-rpc.assetchain.org"}
+Solana       {"supply": 111249983.880312, "decimals": 6, "rpc": "api.mainnet-beta.solana.com"}
+Wed Nov 25 19:50:00 UTC 2026
